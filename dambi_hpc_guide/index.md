@@ -1,6 +1,6 @@
 # Welcome to the DaMBi HPC Guide
 
-This is a collection of best-practices in High-Performance Computing for Bioinformatics. While generally applicable, some information is specific to the UGent HPC infrastructure.
+This is a collection of best-practices in High-Performance Computing for Bioinformatics. While generally applicable, some information is specific to the [UGent HPC infrastructure](https://www.ugent.be/hpc/en/infrastructure).
 
 Below is a list of other UGent resources with more detailed information:
 - VSC HPC tutorial: http://hpcugent.github.io/vsc_user_docs/pdf/intro-HPC-linux-gent.pdf

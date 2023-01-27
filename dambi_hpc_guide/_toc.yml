@@ -11,9 +11,14 @@ chapters:
 - file: prerequisites
 - file: local_setup
 - file: hpc_setup
+  sections:
+  - file: dependencies
 - file: jobs
 - file: interactive
 - file: advanced_topics
+  sections:
+  - file: gpu
+  - file: benchmarking
 - file: contribute
   sections:
   - file: markdown
