@@ -352,7 +352,26 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="running-jobs">
 <h1><span class="section-number">4. </span>Running jobs<a class="headerlink" href="#running-jobs" title="Permalink to this headline">#</a></h1>
-<p>TODO</p>
+<p>Job scripts specify three things: the computational resources being requested (memory, cores, walltime, etc.), the necessary software, and the actual computations. We illustrate this with an example job script.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#PBS -N count_example # job name</span>
+<span class="c1">#PBS -l nodes=1:ppn=1 # single-node job, single core</span>
+<span class="c1">#PBS -l gpus=1 # single GPU (only on GPU clusters!) #PBS -l walltime=2:00:00 # max. 2h of wall time</span>
+module<span class="w"> </span>load<span class="w"> </span>Python<span class="w"> </span>/3.9.6<span class="w"> </span>-<span class="w"> </span>GCCcore<span class="w"> </span>-11.2.0
+<span class="c1"># copy input data from location where job was submitted from</span>
+cp<span class="w"> </span><span class="nv">$PBS_O_WORKDIR</span>/input.txt<span class="w"> </span><span class="nv">$TMPDIR</span>
+<span class="c1"># go to temporary working directory (on local disk) &amp; run Python code</span>
+<span class="nb">cd</span><span class="w"> </span><span class="nv">$TMPDIR</span>
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;print(len(open(’input.txt’).read()))&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>output.txt
+<span class="c1"># copy back output data, ensure unique filename using $PBS_JOBID cp output.txt $VSC_DATA/output_${PBS_JOBID}.txt</span>
+</pre></div>
+</div>
+<p>We see that the job script is just a normal bash script, with some extra commands at the top. These are PBS commands that specify the requested resources. In this case, we request 1 node with a single core and a GPU. Note that only the joltik and accelgor clusters have GPUs, so in order for this to work, you will need to switch to one of these (see further). For more information on specifying requested resources, see chapter 13 of the VSC HPC tutorial. For more example job scripts, see chapter 17.</p>
+<p>Below the PBS commands, we see a module load command. This command specifies the required software modules, in this case a specific version of Python. If you are using libraries like Numpy, Pytorch, Tensorflow, …, you will have to load these modules as well. To see a list of available modules, use the module avail command. To search for modules, use module spider. For more information on the module command, see section 4.1 of the VSC HPC tutorial.</p>
+<p>Finally, we have the actual computations. This is just a normal bash script. You can choose to have your code in this bash script as in the example, but it is a good practice to keep the bash script as simple as possible, and put your actual computations in a different file (e.g. a python script).
+To submit this job to the cluster, we first have to choose a cluster to run it on. By default, jobs are submitted to the victini cluster. This cluster is fine for most jobs, but does not have GPUs. If you want to use a GPU, you will have to switch to either the joltik or accelgor clusters. You can do this using the module swap command: e.g. module swap cluster/joltik. For a list of available clusters, see <a class="reference external" href="https://www.ugent.be/hpc/en/infrastructure">https://www.ugent.be/hpc/en/infrastructure</a>.</p>
+<p>After the cluster has been specified, the job can be submitted using the qsub command: e.g. <code class="docutils literal notranslate"><span class="pre">qsub</span> <span class="pre">script.sh</span></code>. This command will return the job ID of the submitted job. To check on the status of a submitted job, use the <code class="docutils literal notranslate"><span class="pre">qstat</span></code> command. To delete a job that is currently in queue or running, use the qdel command with the appropriate job ID.
+When the job is done, two files will be saved in the directory where the job was submitted from: and output file <code class="docutils literal notranslate"><span class="pre">(*.o*)</span></code> and an error file <code class="docutils literal notranslate"><span class="pre">(*.e*)</span></code>. These files contain the <code class="docutils literal notranslate"><span class="pre">STDOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">STDERR</span></code> of the job, respectively. You can use standard output redirection to make sure your output gets saved somewhere else (as we do in the example).</p>
 </section>
 
     <script type="text/x-thebe-config">

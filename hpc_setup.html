@@ -326,12 +326,46 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access">
+   3.1. Access
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hpc-infrastructure">
+   3.2. HPC Infrastructure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-hpc-file-system">
+   3.3. The HPC file system
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -343,6 +377,29 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#access">
+   3.1. Access
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hpc-infrastructure">
+   3.2. HPC Infrastructure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-hpc-file-system">
+   3.3. The HPC file system
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -355,8 +412,44 @@ title="Print to PDF"
 <ul class="simple">
 <li><p>Clone repo to HPC with git</p></li>
 <li><p>Install dependencies (also conda, maybe easybuild if needed and present)</p></li>
-<li></li>
 </ul>
+<p>The standard workflow for using the HPC is as follows:</p>
+<ol class="simple">
+<li><p>Connect to login node</p>
+<ul class="simple">
+<li><p>Using SSH: <a class="reference external" href="http://login.hpc.ugent.be">login.hpc.ugent.be</a></p></li>
+<li><p>Using the HPC-UGent web portal: <a class="reference external" href="https://login.hpc.ugent.be">https://login.hpc.ugent.be</a></p></li>
+</ul>
+</li>
+<li><p>Transfer files: either using the HPC-UGent web portal, or a tool like scp or rsync</p></li>
+<li><p>Create a job script</p></li>
+<li><p>Submit the job</p></li>
+<li><p>Be patient: the job (usually) first enters the queue, after which it will run and finish.</p></li>
+<li><p>Inspect and/or move results</p></li>
+</ol>
+<section id="access">
+<h2><span class="section-number">3.1. </span>Access<a class="headerlink" href="#access" title="Permalink to this headline">#</a></h2>
+<p>To get access to the UGent HPC, you can follow the instructions on this website: <a class="reference external" href="https://www.ugent.be/hpc/en/access/faq/access">https://www.ugent.be/hpc/en/access/faq/access</a>. Detailed information on how to use and add SSH keys to your account is also available in the VSC HPC tutorial.</p>
+</section>
+<section id="hpc-infrastructure">
+<h2><span class="section-number">3.2. </span>HPC Infrastructure<a class="headerlink" href="#hpc-infrastructure" title="Permalink to this headline">#</a></h2>
+<p>The HPC is built up of a number of different clusters. Each cluster consists again of a number of servers, which are called worker nodes. This is where the actual computations happen. Each worker node has a number of processors, which again have multiple cores. Note that you never directly connect to a worker node. Instead, you connect to a login node, a specific server that only exists for logging into the HPC. You should avoid doing large computations or storing lots of data on a login node. Once logged into the login node, you create a job script, which is a bash script describing the resources you need (number of cores, amount of RAM, number of GPUs, amount of time, …), and contains the instructions to run the actual computations.</p>
+</section>
+<section id="the-hpc-file-system">
+<h2><span class="section-number">3.3. </span>The HPC file system<a class="headerlink" href="#the-hpc-file-system" title="Permalink to this headline">#</a></h2>
+<p>The HPC file system is a bit different than what you might be used to. Every user gets not only a home directory, but also a data and scratch directory. You will usually never use the actual paths to these directories. Instead, the HPC provides you with environment variables that point to each location:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$VSC_HOME</span></code>: only for limited number of small files and scripts. Note that even your project might already be too big for the home directory (especially if it includes any datasets).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$VSC_DATA</span></code>: used for ‘long-term’ storage of (relatively) large files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$VSC_SCRATCH</span></code>: used for ‘live’ input/output data in jobs. Scratch is generally much faster than data or home. Always remove data from this directory once your jobs have finished: there are no guarantees about the time your data will be stored on this system.</p></li>
+</ul>
+<p>The HPC also provides a few useful environment variables for use in job scripts:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">$PBS_JOBID</span></code>: the ID of the currently running job.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$PBS_O_WORKDIR</span></code>: directory from which job was submitted on the login node. It is common to use <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">$PBS_O_WORKDIR</span></code> at the beginning of a job script.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code>: a local unique directory specific to the running job. This directory is cleaned up automatically when the job is done, so make sure to move any result files stored here.</p></li>
+</ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
