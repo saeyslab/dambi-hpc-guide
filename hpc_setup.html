@@ -50,9 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Running jobs" href="jobs.html" />
+    <link rel="next" title="3.6. Dependencies" href="dependencies.html" />
     <link rel="prev" title="2. Your local setup" href="local_setup.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -124,10 +126,22 @@ const thebe_selector_output = ".output, .cell_output"
    2. Your local setup
   </a>
  </li>
- <li class="toctree-l1 current active">
+ <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    3. Your HPC setup
   </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dependencies.html">
+     3.6. Dependencies
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="jobs.html">
@@ -139,17 +153,34 @@ const thebe_selector_output = ".output, .cell_output"
    5. Remote Desktop and Visualisations
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="advanced_topics.html">
    6. Advanced topics
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="gpu.html">
+     6.2. GPU
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="benchmarking.html">
+     6.3. Benchmarking
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="contribute.html">
    7. Contribute
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -363,6 +394,38 @@ title="Print to PDF"
    3.3. The HPC file system
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-transfer">
+   3.4. File transfer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dependencies">
+   3.5. Dependencies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modules">
+     3.5.1. modules
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pip">
+     3.5.2. pip
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conda">
+     3.5.3. conda
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mamba">
+     3.5.4. mamba
+    </a>
+   </li>
+  </ul>
+ </li>
 </ul>
 
     </nav>
@@ -396,6 +459,38 @@ title="Print to PDF"
   <a class="reference internal nav-link" href="#the-hpc-file-system">
    3.3. The HPC file system
   </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-transfer">
+   3.4. File transfer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dependencies">
+   3.5. Dependencies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modules">
+     3.5.1. modules
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pip">
+     3.5.2. pip
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conda">
+     3.5.3. conda
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mamba">
+     3.5.4. mamba
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -450,6 +545,75 @@ title="Print to PDF"
 <li><p><code class="docutils literal notranslate"><span class="pre">$TMPDIR</span></code>: a local unique directory specific to the running job. This directory is cleaned up automatically when the job is done, so make sure to move any result files stored here.</p></li>
 </ul>
 </section>
+<section id="file-transfer">
+<h2><span class="section-number">3.4. </span>File transfer<a class="headerlink" href="#file-transfer" title="Permalink to this headline">#</a></h2>
+<p>For small files, you can use the file browser of the Open OnDemand interface.</p>
+<p>For large files, you can use <code class="docutils literal notranslate"><span class="pre">rsync</span></code> via your <code class="docutils literal notranslate"><span class="pre">ssh</span></code> connection. As example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rsync<span class="w"> </span>-a<span class="w"> </span>--info<span class="o">=</span>progress2<span class="w"> </span>path/to/my_local_dataset<span class="w"> </span>vsc*****@login.hpc.ugent.be:/remote/path/on/vsc/new_parent_of_dataset
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-a</span></code> transfer the whole folder with correct permissions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--info=progress2</span></code> give a general progress overview with transfer speed and estimated time left.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--delete</span></code> remove files in the target directory not in the source directory.</p></li>
+</ul>
+<p>Usage of symbolic links <code class="docutils literal notranslate"><span class="pre">ln</span> <span class="pre">-s</span></code> can also help access files from different location and make easier shortcuts.</p>
+<p>More permanent links between remote filesystems can be done using <code class="docutils literal notranslate"><span class="pre">sshfs</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">mount</span> <span class="o">-</span><span class="n">t</span> <span class="n">sshfs</span> <span class="o">-</span><span class="n">o</span> <span class="n">remount</span><span class="p">,</span><span class="n">allow_other</span><span class="p">,</span><span class="n">default_permissions</span> <span class="o">-</span><span class="n">o</span> <span class="n">Compression</span><span class="o">=</span><span class="n">no</span> <span class="n">vsc</span><span class="o">*****</span><span class="nd">@login</span><span class="o">.</span><span class="n">hpc</span><span class="o">.</span><span class="n">ugent</span><span class="o">.</span><span class="n">be</span><span class="p">:</span><span class="o">/</span><span class="n">remote</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">on</span><span class="o">/</span><span class="n">vsc</span> <span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">mount</span><span class="o">/</span><span class="n">point</span>
+</pre></div>
+</div>
+</section>
+<section id="dependencies">
+<h2><span class="section-number">3.5. </span>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h2>
+<section id="modules">
+<h3><span class="section-number">3.5.1. </span>modules<a class="headerlink" href="#modules" title="Permalink to this headline">#</a></h3>
+<p>You can install modules compiled and provided by the HPC team. See Chapter 4.1.</p>
+</section>
+<section id="pip">
+<h3><span class="section-number">3.5.2. </span>pip<a class="headerlink" href="#pip" title="Permalink to this headline">#</a></h3>
+</section>
+<section id="conda">
+<h3><span class="section-number">3.5.3. </span>conda<a class="headerlink" href="#conda" title="Permalink to this headline">#</a></h3>
+<p><a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/install/linux.html">https://conda.io/projects/conda/en/latest/user-guide/install/linux.html</a></p>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">env.yaml</span></code> file to list your dependencies an update them.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myenv</span>
+<span class="nt">channels</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytorch</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nvidia</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python&lt;3.11</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytorch</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">torchvision</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytorch-cuda=11.7</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pip</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip_only_package</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>update<span class="w">  </span>--file<span class="w"> </span>env.yaml<span class="w"> </span>--prune
+</pre></div>
+</div>
+<p>The latest version of conda can use the libmamba solver, greatly speeding up dependy solving. (<a class="reference external" href="https://www.anaconda.com/blog/conda-is-fast-now">https://www.anaconda.com/blog/conda-is-fast-now</a>)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>conda
+conda<span class="w"> </span>install<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>conda-libmamba-solver
+conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>solver<span class="w"> </span>libmamba
+</pre></div>
+</div>
+</section>
+<section id="mamba">
+<h3><span class="section-number">3.5.4. </span>mamba<a class="headerlink" href="#mamba" title="Permalink to this headline">#</a></h3>
+<p>Mamba is a faster version of conda, although with libmamba in conda, it’s usage is now more limited.</p>
+<p><a class="reference external" href="https://github.com/conda-forge/miniforge">https://github.com/conda-forge/miniforge</a></p>
+<p>curl -L -O “<a class="reference external" href="https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-">https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-</a><span class="math notranslate nohighlight">\((uname)-\)</span>(uname -m).sh”
+bash Mambaforge-<span class="math notranslate nohighlight">\((uname)-\)</span>(uname -m).sh</p>
+<p>As installation path, use <code class="docutils literal notranslate"><span class="pre">$VSC_DATA_VO_USER/mambaforge</span></code> as it has much more space available. Execute the conda init command given by the installer. Add the following lines to your .bashrc:</p>
+<p>CONDA_ENVS_PATH=<span class="math notranslate nohighlight">\(VSC_DATA_VO_USER/mambaforge/envs
+CONDA_PKGS_PATH=\)</span>VSC_DATA_VO_USER/mambaforge/pkgs</p>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -486,10 +650,10 @@ title="Print to PDF"
             <p class="prev-next-title"><span class="section-number">2. </span>Your local setup</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="jobs.html" title="next page">
+    <a class='right-next' id="next-link" href="dependencies.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Running jobs</p>
+        <p class="prev-next-title"><span class="section-number">3.6. </span>Dependencies</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

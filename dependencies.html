@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>7.1. Markdown Files &#8212; DaMBi HPC Guide</title>
+    <title>3.6. Dependencies &#8212; DaMBi HPC Guide</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="7.2. Content with notebooks" href="notebooks.html" />
-    <link rel="prev" title="7. Contribute" href="contribute.html" />
+    <link rel="next" title="4. Running jobs" href="jobs.html" />
+    <link rel="prev" title="3. Your HPC setup" href="hpc_setup.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -124,18 +126,18 @@ const thebe_selector_output = ".output, .cell_output"
    2. Your local setup
   </a>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="hpc_setup.html">
    3. Your HPC setup
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dependencies.html">
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      3.6. Dependencies
     </a>
    </li>
@@ -173,18 +175,18 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="contribute.html">
    7. Contribute
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="markdown.html">
      7.1. Markdown Files
     </a>
    </li>
@@ -290,7 +292,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/saeyslab/dambi-hpc-guide/issues/new?title=Issue%20on%20page%20%2Fmarkdown.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/saeyslab/dambi-hpc-guide/issues/new?title=Issue%20on%20page%20%2Fdependencies.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -318,7 +320,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="_sources/markdown.md"
+        <a href="_sources/dependencies.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -378,23 +380,28 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-myst">
-   7.1.1. What is MyST?
+  <a class="reference internal nav-link" href="#modules">
+   3.6.1. modules
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sample-roles-and-directives">
-   7.1.2. Sample Roles and Directives
+  <a class="reference internal nav-link" href="#pip">
+   3.6.2. pip
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citations">
-   7.1.3. Citations
+  <a class="reference internal nav-link" href="#r">
+   3.6.3. R
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learn-more">
-   7.1.4. Learn more
+  <a class="reference internal nav-link" href="#conda">
+   3.6.4. conda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mamba">
+   3.6.5. mamba
   </a>
  </li>
 </ul>
@@ -406,7 +413,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Markdown Files</h1>
+                <h1>Dependencies</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -417,23 +424,28 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-myst">
-   7.1.1. What is MyST?
+  <a class="reference internal nav-link" href="#modules">
+   3.6.1. modules
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sample-roles-and-directives">
-   7.1.2. Sample Roles and Directives
+  <a class="reference internal nav-link" href="#pip">
+   3.6.2. pip
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#citations">
-   7.1.3. Citations
+  <a class="reference internal nav-link" href="#r">
+   3.6.3. R
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#learn-more">
-   7.1.4. Learn more
+  <a class="reference internal nav-link" href="#conda">
+   3.6.4. conda
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mamba">
+   3.6.5. mamba
   </a>
  </li>
 </ul>
@@ -446,58 +458,58 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="markdown-files">
-<h1><span class="section-number">7.1. </span>Markdown Files<a class="headerlink" href="#markdown-files" title="Permalink to this headline">#</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.
-This is a simple file to help you get started and show off some syntax.</p>
-<section id="what-is-myst">
-<h2><span class="section-number">7.1.1. </span>What is MyST?<a class="headerlink" href="#what-is-myst" title="Permalink to this headline">#</a></h2>
-<p>MyST stands for “Markedly Structured Text”. It
-is a slight variation on a flavor of markdown called “CommonMark” markdown,
-with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
-in the Sphinx ecosystem.</p>
-<p>For more about MyST, see <a class="reference external" href="https://jupyterbook.org/content/myst.html">the MyST Markdown Overview</a>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="dependencies">
+<h1><span class="section-number">3.6. </span>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h1>
+<section id="modules">
+<h2><span class="section-number">3.6.1. </span>modules<a class="headerlink" href="#modules" title="Permalink to this headline">#</a></h2>
+<p>You can install modules compiled and provided by the HPC team. See Chapter 4.1.</p>
 </section>
-<section id="sample-roles-and-directives">
-<h2><span class="section-number">7.1.2. </span>Sample Roles and Directives<a class="headerlink" href="#sample-roles-and-directives" title="Permalink to this headline">#</a></h2>
-<p>Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but <strong>roles are written in one line</strong>, whereas
-<strong>directives span many lines</strong>. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.</p>
-<p>Here is a “note” directive:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here is a note</p>
+<section id="pip">
+<h2><span class="section-number">3.6.2. </span>pip<a class="headerlink" href="#pip" title="Permalink to this headline">#</a></h2>
+<p>You can save Python dependencies in a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file and install them (<a class="reference external" href="https://pip.pypa.io/en/stable/user_guide/#requirements-files">https://pip.pypa.io/en/stable/user_guide/#requirements-files</a>).</p>
+</section>
+<section id="r">
+<h2><span class="section-number">3.6.3. </span>R<a class="headerlink" href="#r" title="Permalink to this headline">#</a></h2>
+<p>For Bioinformatics, you can install using <a class="reference external" href="https://bioconductor.org/install/">BiocManager</a>. This is mostly done at the top of your main script.</p>
+</section>
+<section id="conda">
+<h2><span class="section-number">3.6.4. </span>conda<a class="headerlink" href="#conda" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/install/linux.html">https://conda.io/projects/conda/en/latest/user-guide/install/linux.html</a></p>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">env.yaml</span></code> file to list your dependencies an update them.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myenv</span>
+<span class="nt">channels</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytorch</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nvidia</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python&lt;3.11</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytorch</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">torchvision</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pytorch-cuda=11.7</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pip</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pip_only_package</span>
+</pre></div>
 </div>
-<p>It will be rendered in a special box when you build your book.</p>
-<p>Here is an inline directive to refer to a document: <a class="reference internal" href="markdown-notebooks.html"><span class="doc">Notebooks with MyST Markdown</span></a>.</p>
-</section>
-<section id="citations">
-<h2><span class="section-number">7.1.3. </span>Citations<a class="headerlink" href="#citations" title="Permalink to this headline">#</a></h2>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span id="id1">[<a class="reference internal" href="#id3" title="Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In International Conference on Cognitive Neuroscience. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.">HdHPK14</a>]</span>.</p>
-<p>Moreover, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<div class="docutils container" id="id2">
-<dl class="citation">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">HdHPK14</a></span></dt>
-<dd><p>Christopher Ramsay Holdgraf, Wendy de Heer, Brian N. Pasley, and Robert T. Knight. Evidence for Predictive Coding in Human Auditory Cortex. In <em>International Conference on Cognitive Neuroscience</em>. Brisbane, Australia, Australia, 2014. Frontiers in Neuroscience.</p>
-</dd>
-</dl>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>update<span class="w">  </span>--file<span class="w"> </span>env.yaml<span class="w"> </span>--prune
+</pre></div>
+</div>
+<p>The latest version of conda can use the libmamba solver, greatly speeding up dependy solving. (<a class="reference external" href="https://www.anaconda.com/blog/conda-is-fast-now">https://www.anaconda.com/blog/conda-is-fast-now</a>)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>update<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>conda
+conda<span class="w"> </span>install<span class="w"> </span>-n<span class="w"> </span>base<span class="w"> </span>conda-libmamba-solver
+conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w"> </span>solver<span class="w"> </span>libmamba
+</pre></div>
 </div>
 </section>
-<section id="learn-more">
-<h2><span class="section-number">7.1.4. </span>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this headline">#</a></h2>
-<p>This is just a simple starter to get you started.
-You can learn a lot more at <a class="reference external" href="https://jupyterbook.org">jupyterbook.org</a>.</p>
+<section id="mamba">
+<h2><span class="section-number">3.6.5. </span>mamba<a class="headerlink" href="#mamba" title="Permalink to this headline">#</a></h2>
+<p>Mamba is a faster version of conda, although with libmamba in conda, it’s usage is now more limited.</p>
+<p><a class="reference external" href="https://github.com/conda-forge/miniforge">https://github.com/conda-forge/miniforge</a></p>
+<p>curl -L -O “<a class="reference external" href="https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-">https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-</a><span class="math notranslate nohighlight">\((uname)-\)</span>(uname -m).sh”
+bash Mambaforge-<span class="math notranslate nohighlight">\((uname)-\)</span>(uname -m).sh</p>
+<p>As installation path, use <code class="docutils literal notranslate"><span class="pre">$VSC_DATA_VO_USER/mambaforge</span></code> as it has much more space available. Execute the conda init command given by the installer. Add the following lines to your .bashrc:</p>
+<p>CONDA_ENVS_PATH=<span class="math notranslate nohighlight">\(VSC_DATA_VO_USER/mambaforge/envs
+CONDA_PKGS_PATH=\)</span>VSC_DATA_VO_USER/mambaforge/pkgs</p>
 </section>
 </section>
 
@@ -528,17 +540,17 @@ You can learn a lot more at <a class="reference external" href="https://jupyterb
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="contribute.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="hpc_setup.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7. </span>Contribute</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Your HPC setup</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="notebooks.html" title="next page">
+    <a class='right-next' id="next-link" href="jobs.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7.2. </span>Content with notebooks</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Running jobs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

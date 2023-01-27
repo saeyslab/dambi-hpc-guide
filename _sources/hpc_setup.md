@@ -30,3 +30,79 @@ The HPC also provides a few useful environment variables for use in job scripts:
 - `$PBS_JOBID`: the ID of the currently running job.
 - `$PBS_O_WORKDIR`: directory from which job was submitted on the login node. It is common to use `cd $PBS_O_WORKDIR` at the beginning of a job script.
 - `$TMPDIR`: a local unique directory specific to the running job. This directory is cleaned up automatically when the job is done, so make sure to move any result files stored here.
+
+## File transfer
+
+For small files, you can use the file browser of the Open OnDemand interface.
+
+For large files, you can use `rsync` via your `ssh` connection. As example:
+
+```bash
+rsync -a --info=progress2 path/to/my_local_dataset vsc*****@login.hpc.ugent.be:/remote/path/on/vsc/new_parent_of_dataset
+```
+
+- `-a` transfer the whole folder with correct permissions.
+- `--info=progress2` give a general progress overview with transfer speed and estimated time left.
+- `--delete` remove files in the target directory not in the source directory.
+
+Usage of symbolic links `ln -s` can also help access files from different location and make easier shortcuts. 
+
+More permanent links between remote filesystems can be done using `sshfs`
+```
+sudo mount -t sshfs -o remount,allow_other,default_permissions -o Compression=no vsc*****@login.hpc.ugent.be:/remote/path/on/vsc /local/path/to/mount/point
+```
+
+## Dependencies
+
+### modules
+You can install modules compiled and provided by the HPC team. See Chapter 4.1. 
+
+### pip
+
+
+### conda
+
+https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
+
+You can use `env.yaml` file to list your dependencies an update them.
+
+```yaml
+name: myenv
+channels:
+    - pytorch
+    - nvidia
+    - conda-forge
+dependencies:
+    - python<3.11
+    - pytorch
+    - torchvision
+    - pytorch-cuda=11.7
+    - pip
+    - pip:
+        - pip_only_package
+```
+```bash
+conda env update  --file env.yaml --prune
+```
+
+The latest version of conda can use the libmamba solver, greatly speeding up dependy solving. (https://www.anaconda.com/blog/conda-is-fast-now) 
+
+```bash
+conda update -n base conda
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba
+```
+
+### mamba
+
+Mamba is a faster version of conda, although with libmamba in conda, it's usage is now more limited.
+
+https://github.com/conda-forge/miniforge
+
+curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh"
+bash Mambaforge-$(uname)-$(uname -m).sh
+
+As installation path, use `$VSC_DATA_VO_USER/mambaforge` as it has much more space available. Execute the conda init command given by the installer. Add the following lines to your .bashrc:
+
+CONDA_ENVS_PATH=$VSC_DATA_VO_USER/mambaforge/envs
+CONDA_PKGS_PATH=$VSC_DATA_VO_USER/mambaforge/pkgs
