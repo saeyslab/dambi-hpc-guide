@@ -4,7 +4,7 @@
 Read [Chapter 8 "Using the HPC-UGent web portal"](https://www.ugent.be/hpc/en/support/documentation.htm) of the HPC Documentation first, as this gives a general introduction to Open OnDemand.
 ```
 
-## Interactive RStudio
+## Launching an interactive RStudio session
 
 - Login at https://login.hpc.ugent.be
 - Select Interactive Apps > RStudio Server
@@ -23,6 +23,10 @@ For cluster `slaking` strict limits are in place per user: max. 5 jobs in queue,
 - Paste the script you want to run, which should also install all dependencies with e.g. `BiocManager`
 - Use the Files interface at the Dashboard to upload your data and download the output files
 
+```{warning}
+Be sure to delete your interactive session when not needed anymore, as your queueing priority gets downgrading when wasting HPC compute resources.
+```
+
 ### I need more than 27GB of RAM
 You can't go over the 27GB limit for the `slaking` cluster and only work on a subset of your data to create/debug a script without waiting too long.
 
@@ -40,10 +44,7 @@ There are 2 alternatives:
 You can view the maximum memory of a node at https://www.ugent.be/hpc/en/infrastructure. You can determine your required memory using the [RStudio memory widget](https://support.posit.co/hc/en-us/articles/1500005616261-Understanding-Memory-Usage-in-the-RStudio-IDE) when analyzing a subset of your total data.
 ```
 
-Ideally, you don't active wait on queued jobs, but further improve your script on the debugging cluster using a subset of your total data.
-
-## Using the Job Composer
-If the waiting time is too long or you need more resources, you can launch your script as a job via the [Job Composer](https://login.hpc.ugent.be/pun/sys/myjobs).
+Ideally, you don't active wait on a big interactive sessions to become available or on queued jobs, but further improve your script on the debugging cluster using a subset of your total data. Be sure to check the email notification option.
 
 
 ## Links with further documentation

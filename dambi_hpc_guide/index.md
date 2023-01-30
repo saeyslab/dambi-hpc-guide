@@ -6,7 +6,7 @@ This is a collection of best-practices in High-Performance Computing for Bioinfo
 Be sure to read [Chapter 1 to 3 of the UGent HPC guide](https://www.ugent.be/hpc/en/support/documentation.htm) first, as this will allow you to connect to the HPC!
 ```
 
-The guide material builds over three levels:
+The guide material builds up in three levels:
 
 1. **Beginner**: interactive sessions (RStudio, Jupyter Notebook) via *Open OnDemand*
     - for a general audience

@@ -1,5 +1,15 @@
 # Running jobs
 
+## Job Composer
+
+If the waiting time for an interactive session is too long or you need more resources, you can launch your script as a job via the [Job Composer](https://login.hpc.ugent.be/pun/sys/myjobs).
+
+You can edit the script via the Open OnDemand File manager or an interactive session on the debugging cluster.
+
+## Job scripts
+
+You can launch scripts by yourself without the interactive Job Composer.
+
 Job scripts specify three things: the computational resources being requested (memory, cores, walltime, etc.), the necessary software, and the actual computations. We illustrate this with an example job script.
 
 ```bash
