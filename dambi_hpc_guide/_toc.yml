@@ -8,13 +8,13 @@ defaults:  # The defaults key will be applied to all chapters and sub-sections
 options:  # The options key will be applied to all chapters, but not sub-sections
   numbered: True
 chapters:
-- file: prerequisites
-- file: local_setup
-- file: hpc_setup
-  sections:
-  - file: dependencies
-- file: jobs
 - file: interactive
+- file: jobs
+  sections:
+  - file: prerequisites
+  - file: local_setup
+  - file: hpc_setup
+  - file: dependencies
 - file: advanced_topics
   sections:
   - file: gpu
