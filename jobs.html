@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4. Running jobs &#8212; DaMBi HPC Guide</title>
+    <title>2. Running jobs &#8212; DaMBi HPC Guide</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="5. Remote Desktop and Visualisations" href="interactive.html" />
-    <link rel="prev" title="3.6. Dependencies" href="dependencies.html" />
+    <link rel="next" title="2.1. Prerequisites" href="prerequisites.html" />
+    <link rel="prev" title="1. Interactive sessions" href="interactive.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -115,45 +115,45 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="prerequisites.html">
-   1. Prerequisites
+  <a class="reference internal" href="interactive.html">
+   1. Interactive sessions
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="local_setup.html">
-   2. Your local setup
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   2. Running jobs
   </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="hpc_setup.html">
-   3. Your HPC setup
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="prerequisites.html">
+     2.1. Prerequisites
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="local_setup.html">
+     2.2. Your local setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hpc_setup.html">
+     2.3. Your HPC setup
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="dependencies.html">
-     3.6. Dependencies
+     2.4. Dependencies
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   4. Running jobs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="interactive.html">
-   5. Remote Desktop and Visualisations
-  </a>
- </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="advanced_topics.html">
-   6. Advanced topics
+   3. Advanced topics
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -163,19 +163,19 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="gpu.html">
-     6.2. GPU
+     3.2. GPU
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="benchmarking.html">
-     6.3. Benchmarking
+     3.3. Benchmarking
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="contribute.html">
-   7. Contribute
+   4. Contribute
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -185,17 +185,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="markdown.html">
-     7.1. Markdown Files
+     4.1. Markdown Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="notebooks.html">
-     7.2. Content with notebooks
+     4.2. Content with notebooks
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="markdown-notebooks.html">
-     7.3. Notebooks with MyST Markdown
+     4.3. Notebooks with MyST Markdown
     </a>
    </li>
   </ul>
@@ -380,7 +380,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="running-jobs">
-<h1><span class="section-number">4. </span>Running jobs<a class="headerlink" href="#running-jobs" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2. </span>Running jobs<a class="headerlink" href="#running-jobs" title="Permalink to this headline">#</a></h1>
 <p>Job scripts specify three things: the computational resources being requested (memory, cores, walltime, etc.), the necessary software, and the actual computations. We illustrate this with an example job script.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#PBS -N count_example # job name</span>
@@ -401,6 +401,8 @@ python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;p
 To submit this job to the cluster, we first have to choose a cluster to run it on. By default, jobs are submitted to the victini cluster. This cluster is fine for most jobs, but does not have GPUs. If you want to use a GPU, you will have to switch to either the joltik or accelgor clusters. You can do this using the module swap command: e.g. module swap cluster/joltik. For a list of available clusters, see <a class="reference external" href="https://www.ugent.be/hpc/en/infrastructure">https://www.ugent.be/hpc/en/infrastructure</a>.</p>
 <p>After the cluster has been specified, the job can be submitted using the qsub command: e.g. <code class="docutils literal notranslate"><span class="pre">qsub</span> <span class="pre">script.sh</span></code>. This command will return the job ID of the submitted job. To check on the status of a submitted job, use the <code class="docutils literal notranslate"><span class="pre">qstat</span></code> command. To delete a job that is currently in queue or running, use the qdel command with the appropriate job ID.
 When the job is done, two files will be saved in the directory where the job was submitted from: and output file <code class="docutils literal notranslate"><span class="pre">(*.o*)</span></code> and an error file <code class="docutils literal notranslate"><span class="pre">(*.e*)</span></code>. These files contain the <code class="docutils literal notranslate"><span class="pre">STDOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">STDERR</span></code> of the job, respectively. You can use standard output redirection to make sure your output gets saved somewhere else (as we do in the example).</p>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -430,17 +432,17 @@ When the job is done, two files will be saved in the directory where the job was
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="dependencies.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="interactive.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3.6. </span>Dependencies</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Interactive sessions</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="interactive.html" title="next page">
+    <a class='right-next' id="next-link" href="prerequisites.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Remote Desktop and Visualisations</p>
+        <p class="prev-next-title"><span class="section-number">2.1. </span>Prerequisites</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

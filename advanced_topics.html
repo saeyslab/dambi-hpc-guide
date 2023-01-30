@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>6. Advanced topics &#8212; DaMBi HPC Guide</title>
+    <title>3. Advanced topics &#8212; DaMBi HPC Guide</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="6.2. GPU" href="gpu.html" />
-    <link rel="prev" title="5. Remote Desktop and Visualisations" href="interactive.html" />
+    <link rel="next" title="3.2. GPU" href="gpu.html" />
+    <link rel="prev" title="2.4. Dependencies" href="dependencies.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -115,18 +115,13 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="prerequisites.html">
-   1. Prerequisites
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="local_setup.html">
-   2. Your local setup
+  <a class="reference internal" href="interactive.html">
+   1. Interactive sessions
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="hpc_setup.html">
-   3. Your HPC setup
+  <a class="reference internal" href="jobs.html">
+   2. Running jobs
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -135,25 +130,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="prerequisites.html">
+     2.1. Prerequisites
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="local_setup.html">
+     2.2. Your local setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hpc_setup.html">
+     2.3. Your HPC setup
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="dependencies.html">
-     3.6. Dependencies
+     2.4. Dependencies
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="jobs.html">
-   4. Running jobs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="interactive.html">
-   5. Remote Desktop and Visualisations
-  </a>
- </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
-   6. Advanced topics
+   3. Advanced topics
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -163,19 +163,19 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="gpu.html">
-     6.2. GPU
+     3.2. GPU
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="benchmarking.html">
-     6.3. Benchmarking
+     3.3. Benchmarking
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="contribute.html">
-   7. Contribute
+   4. Contribute
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -185,17 +185,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="markdown.html">
-     7.1. Markdown Files
+     4.1. Markdown Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="notebooks.html">
-     7.2. Content with notebooks
+     4.2. Content with notebooks
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="markdown-notebooks.html">
-     7.3. Notebooks with MyST Markdown
+     4.3. Notebooks with MyST Markdown
     </a>
    </li>
   </ul>
@@ -379,12 +379,12 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tips">
-   6.1. Tips
+   3.1. Tips
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pytorch">
-     6.1.1. PyTorch
+     3.1.1. PyTorch
     </a>
    </li>
   </ul>
@@ -410,12 +410,12 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tips">
-   6.1. Tips
+   3.1. Tips
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pytorch">
-     6.1.1. PyTorch
+     3.1.1. PyTorch
     </a>
    </li>
   </ul>
@@ -431,7 +431,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="advanced-topics">
-<h1><span class="section-number">6. </span>Advanced topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">3. </span>Advanced topics<a class="headerlink" href="#advanced-topics" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
 <li><p>Use of Singularity and Nextflow</p>
 <ul>
@@ -445,7 +445,7 @@ title="Print to PDF"
 </li>
 </ul>
 <section id="tips">
-<h2><span class="section-number">6.1. </span>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">3.1. </span>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">#</a></h2>
 <p>Try to estimate your required time and memory. If you request a lot of resources, your job will be waiting in the queue for longer. However, if you don’t request enough resources (e.g. the memory is exceeded or the walltime runs out), your job will automatically be terminated. Therefore, we advise to try to slightly overestimate your required resources. For example, if you expect your job to take 1 hour of walltime, request 2 hours. There is no standard way of estimating resources except for trial and error: just try some settings to see what works and how many resources are actually used.</p>
 <p>Do a test run with a small version of your problem. If you immediately submit a job that takes 6 hours to run (after a few more hours in queue), and it fails because of a simple bug in your code (or the output was not properly saved), you will lose a lot of time.</p>
 <p>Make sure you write as much output as possible to disk, even output that you are not sure you will need. For example, if you want to create a line plot showing the accuracy of an ML model as a function of some hyperparameter, don’t just save the plot itself, but also save the raw data (e.g. as a CSV file). This will allow you to regenerate the plot at a higher resolution, change colors, … without having to re-run your experiment. Try to think of all the data you might need further on in your analysis before starting your experiment. For example: maybe later in your project you will want to show the training time for your model as a function of the hyperparameter as well?</p>
@@ -453,7 +453,7 @@ title="Print to PDF"
 <p>Documentation for using the GPU cluster joltik or accelgor is provided in the manual under Chapter 21 “HPC-UGent GPU cluster”.</p>
 <p>When using a GPU cluster, first try a simple test script to see if your GPU is properly requested. This can usually be done using a single line of Python, e.g. <code class="docutils literal notranslate"><span class="pre">torch.cuda.is</span> <span class="pre">available()</span></code> in Pytorch.</p>
 <section id="pytorch">
-<h3><span class="section-number">6.1.1. </span>PyTorch<a class="headerlink" href="#pytorch" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">3.1.1. </span>PyTorch<a class="headerlink" href="#pytorch" title="Permalink to this headline">#</a></h3>
 <p>A pre-built PyTorch module is provided on joltik. Loading this module sets up python, CUDA, and pytorch.</p>
 <p>When using this module, you could run into some versioning issues. A solution can be switching to loading the python and CUDA module separately, and using a virtualenv with pytorch installed.</p>
 <p>A qsub script for DL with pytorch could look like this:</p>
@@ -508,17 +508,17 @@ module<span class="w"> </span>load<span class="w"> </span>CUDA
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="interactive.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="dependencies.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>Remote Desktop and Visualisations</p>
+            <p class="prev-next-title"><span class="section-number">2.4. </span>Dependencies</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="gpu.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6.2. </span>GPU</p>
+        <p class="prev-next-title"><span class="section-number">3.2. </span>GPU</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

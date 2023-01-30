@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>7.3. Notebooks with MyST Markdown &#8212; DaMBi HPC Guide</title>
+    <title>4.3. Notebooks with MyST Markdown &#8212; DaMBi HPC Guide</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="7.2. Content with notebooks" href="notebooks.html" />
+    <link rel="prev" title="4.2. Content with notebooks" href="notebooks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,18 +114,13 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="prerequisites.html">
-   1. Prerequisites
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="local_setup.html">
-   2. Your local setup
+  <a class="reference internal" href="interactive.html">
+   1. Interactive sessions
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="hpc_setup.html">
-   3. Your HPC setup
+  <a class="reference internal" href="jobs.html">
+   2. Running jobs
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -134,25 +129,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="prerequisites.html">
+     2.1. Prerequisites
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="local_setup.html">
+     2.2. Your local setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hpc_setup.html">
+     2.3. Your HPC setup
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="dependencies.html">
-     3.6. Dependencies
+     2.4. Dependencies
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="jobs.html">
-   4. Running jobs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="interactive.html">
-   5. Remote Desktop and Visualisations
-  </a>
- </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="advanced_topics.html">
-   6. Advanced topics
+   3. Advanced topics
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -162,19 +162,19 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="gpu.html">
-     6.2. GPU
+     3.2. GPU
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="benchmarking.html">
-     6.3. Benchmarking
+     3.3. Benchmarking
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="contribute.html">
-   7. Contribute
+   4. Contribute
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -184,17 +184,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="markdown.html">
-     7.1. Markdown Files
+     4.1. Markdown Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="notebooks.html">
-     7.2. Content with notebooks
+     4.2. Content with notebooks
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     7.3. Notebooks with MyST Markdown
+     4.3. Notebooks with MyST Markdown
     </a>
    </li>
   </ul>
@@ -424,17 +424,17 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#an-example-cell">
-   7.3.1. An example cell
+   4.3.1. An example cell
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">
-   7.3.2. Create a notebook with MyST Markdown
+   4.3.2. Create a notebook with MyST Markdown
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">
-   7.3.3. Quickly add YAML metadata for MyST Notebooks
+   4.3.3. Quickly add YAML metadata for MyST Notebooks
   </a>
  </li>
 </ul>
@@ -458,17 +458,17 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#an-example-cell">
-   7.3.1. An example cell
+   4.3.1. An example cell
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">
-   7.3.2. Create a notebook with MyST Markdown
+   4.3.2. Create a notebook with MyST Markdown
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">
-   7.3.3. Quickly add YAML metadata for MyST Notebooks
+   4.3.3. Quickly add YAML metadata for MyST Notebooks
   </a>
  </li>
 </ul>
@@ -482,12 +482,12 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="notebooks-with-myst-markdown">
-<h1><span class="section-number">7.3. </span>Notebooks with MyST Markdown<a class="headerlink" href="#notebooks-with-myst-markdown" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">4.3. </span>Notebooks with MyST Markdown<a class="headerlink" href="#notebooks-with-myst-markdown" title="Permalink to this headline">#</a></h1>
 <p>Jupyter Book also lets you write text-based notebooks using MyST Markdown.
 See <a class="reference external" href="https://jupyterbook.org/file-types/myst-notebooks.html">the Notebooks with MyST Markdown documentation</a> for more detailed instructions.
 This page shows off a notebook written in MyST Markdown.</p>
 <section id="an-example-cell">
-<h2><span class="section-number">7.3.1. </span>An example cell<a class="headerlink" href="#an-example-cell" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.3.1. </span>An example cell<a class="headerlink" href="#an-example-cell" title="Permalink to this headline">#</a></h2>
 <p>With MyST Markdown, you can define code cells with a directive like so:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -510,7 +510,7 @@ in-line with the rest of your content.</p>
 </div>
 </section>
 <section id="create-a-notebook-with-myst-markdown">
-<h2><span class="section-number">7.3.2. </span>Create a notebook with MyST Markdown<a class="headerlink" href="#create-a-notebook-with-myst-markdown" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.3.2. </span>Create a notebook with MyST Markdown<a class="headerlink" href="#create-a-notebook-with-myst-markdown" title="Permalink to this headline">#</a></h2>
 <p>MyST Markdown notebooks are defined by two things:</p>
 <ol class="simple">
 <li><p>YAML metadata that is needed to understand if / how it should convert text files to notebooks (including information about the kernel needed).
@@ -520,7 +520,7 @@ See the YAML at the top of this page for example.</p></li>
 <p>That’s all that is needed to get started!</p>
 </section>
 <section id="quickly-add-yaml-metadata-for-myst-notebooks">
-<h2><span class="section-number">7.3.3. </span>Quickly add YAML metadata for MyST Notebooks<a class="headerlink" href="#quickly-add-yaml-metadata-for-myst-notebooks" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">4.3.3. </span>Quickly add YAML metadata for MyST Notebooks<a class="headerlink" href="#quickly-add-yaml-metadata-for-myst-notebooks" title="Permalink to this headline">#</a></h2>
 <p>If you have a markdown file and you’d like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">markdownfile</span><span class="o">.</span><span class="n">md</span>
 </pre></div>
@@ -559,7 +559,7 @@ See the YAML at the top of this page for example.</p></li>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7.2. </span>Content with notebooks</p>
+            <p class="prev-next-title"><span class="section-number">4.2. </span>Content with notebooks</p>
         </div>
     </a>
 </div>

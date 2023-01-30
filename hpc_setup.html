@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Your HPC setup &#8212; DaMBi HPC Guide</title>
+    <title>2.3. Your HPC setup &#8212; DaMBi HPC Guide</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3.6. Dependencies" href="dependencies.html" />
-    <link rel="prev" title="2. Your local setup" href="local_setup.html" />
+    <link rel="next" title="2.4. Dependencies" href="dependencies.html" />
+    <link rel="prev" title="2.2. Your local setup" href="local_setup.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -117,45 +117,45 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="prerequisites.html">
-   1. Prerequisites
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="local_setup.html">
-   2. Your local setup
+  <a class="reference internal" href="interactive.html">
+   1. Interactive sessions
   </a>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   3. Your HPC setup
+  <a class="reference internal" href="jobs.html">
+   2. Running jobs
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="prerequisites.html">
+     2.1. Prerequisites
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="local_setup.html">
+     2.2. Your local setup
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.3. Your HPC setup
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dependencies.html">
-     3.6. Dependencies
+     2.4. Dependencies
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="jobs.html">
-   4. Running jobs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="interactive.html">
-   5. Remote Desktop and Visualisations
-  </a>
- </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="advanced_topics.html">
-   6. Advanced topics
+   3. Advanced topics
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -165,19 +165,19 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="gpu.html">
-     6.2. GPU
+     3.2. GPU
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="benchmarking.html">
-     6.3. Benchmarking
+     3.3. Benchmarking
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="contribute.html">
-   7. Contribute
+   4. Contribute
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -187,17 +187,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="markdown.html">
-     7.1. Markdown Files
+     4.1. Markdown Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="notebooks.html">
-     7.2. Content with notebooks
+     4.2. Content with notebooks
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="markdown-notebooks.html">
-     7.3. Notebooks with MyST Markdown
+     4.3. Notebooks with MyST Markdown
     </a>
    </li>
   </ul>
@@ -381,47 +381,47 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#access">
-   3.1. Access
+   2.3.1. Access
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hpc-infrastructure">
-   3.2. HPC Infrastructure
+   2.3.2. HPC Infrastructure
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-hpc-file-system">
-   3.3. The HPC file system
+   2.3.3. The HPC file system
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#file-transfer">
-   3.4. File transfer
+   2.3.4. File transfer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dependencies">
-   3.5. Dependencies
+   2.3.5. Dependencies
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modules">
-     3.5.1. modules
+     2.3.5.1. modules
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pip">
-     3.5.2. pip
+     2.3.5.2. pip
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conda">
-     3.5.3. conda
+     2.3.5.3. conda
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mamba">
-     3.5.4. mamba
+     2.3.5.4. mamba
     </a>
    </li>
   </ul>
@@ -447,47 +447,47 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#access">
-   3.1. Access
+   2.3.1. Access
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#hpc-infrastructure">
-   3.2. HPC Infrastructure
+   2.3.2. HPC Infrastructure
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-hpc-file-system">
-   3.3. The HPC file system
+   2.3.3. The HPC file system
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#file-transfer">
-   3.4. File transfer
+   2.3.4. File transfer
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dependencies">
-   3.5. Dependencies
+   2.3.5. Dependencies
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#modules">
-     3.5.1. modules
+     2.3.5.1. modules
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#pip">
-     3.5.2. pip
+     2.3.5.2. pip
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#conda">
-     3.5.3. conda
+     2.3.5.3. conda
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mamba">
-     3.5.4. mamba
+     2.3.5.4. mamba
     </a>
    </li>
   </ul>
@@ -503,7 +503,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="your-hpc-setup">
-<h1><span class="section-number">3. </span>Your HPC setup<a class="headerlink" href="#your-hpc-setup" title="Permalink to this headline">#</a></h1>
+<h1><span class="section-number">2.3. </span>Your HPC setup<a class="headerlink" href="#your-hpc-setup" title="Permalink to this headline">#</a></h1>
 <ul class="simple">
 <li><p>Clone repo to HPC with git</p></li>
 <li><p>Install dependencies (also conda, maybe easybuild if needed and present)</p></li>
@@ -523,15 +523,15 @@ title="Print to PDF"
 <li><p>Inspect and/or move results</p></li>
 </ol>
 <section id="access">
-<h2><span class="section-number">3.1. </span>Access<a class="headerlink" href="#access" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3.1. </span>Access<a class="headerlink" href="#access" title="Permalink to this headline">#</a></h2>
 <p>To get access to the UGent HPC, you can follow the instructions on this website: <a class="reference external" href="https://www.ugent.be/hpc/en/access/faq/access">https://www.ugent.be/hpc/en/access/faq/access</a>. Detailed information on how to use and add SSH keys to your account is also available in the VSC HPC tutorial.</p>
 </section>
 <section id="hpc-infrastructure">
-<h2><span class="section-number">3.2. </span>HPC Infrastructure<a class="headerlink" href="#hpc-infrastructure" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3.2. </span>HPC Infrastructure<a class="headerlink" href="#hpc-infrastructure" title="Permalink to this headline">#</a></h2>
 <p>The HPC is built up of a number of different clusters. Each cluster consists again of a number of servers, which are called worker nodes. This is where the actual computations happen. Each worker node has a number of processors, which again have multiple cores. Note that you never directly connect to a worker node. Instead, you connect to a login node, a specific server that only exists for logging into the HPC. You should avoid doing large computations or storing lots of data on a login node. Once logged into the login node, you create a job script, which is a bash script describing the resources you need (number of cores, amount of RAM, number of GPUs, amount of time, …), and contains the instructions to run the actual computations.</p>
 </section>
 <section id="the-hpc-file-system">
-<h2><span class="section-number">3.3. </span>The HPC file system<a class="headerlink" href="#the-hpc-file-system" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3.3. </span>The HPC file system<a class="headerlink" href="#the-hpc-file-system" title="Permalink to this headline">#</a></h2>
 <p>The HPC file system is a bit different than what you might be used to. Every user gets not only a home directory, but also a data and scratch directory. You will usually never use the actual paths to these directories. Instead, the HPC provides you with environment variables that point to each location:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">$VSC_HOME</span></code>: only for limited number of small files and scripts. Note that even your project might already be too big for the home directory (especially if it includes any datasets).</p></li>
@@ -546,7 +546,7 @@ title="Print to PDF"
 </ul>
 </section>
 <section id="file-transfer">
-<h2><span class="section-number">3.4. </span>File transfer<a class="headerlink" href="#file-transfer" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3.4. </span>File transfer<a class="headerlink" href="#file-transfer" title="Permalink to this headline">#</a></h2>
 <p>For small files, you can use the file browser of the Open OnDemand interface.</p>
 <p>For large files, you can use <code class="docutils literal notranslate"><span class="pre">rsync</span></code> via your <code class="docutils literal notranslate"><span class="pre">ssh</span></code> connection. As example:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rsync<span class="w"> </span>-a<span class="w"> </span>--info<span class="o">=</span>progress2<span class="w"> </span>path/to/my_local_dataset<span class="w"> </span>vsc*****@login.hpc.ugent.be:/remote/path/on/vsc/new_parent_of_dataset
@@ -564,16 +564,16 @@ title="Print to PDF"
 </div>
 </section>
 <section id="dependencies">
-<h2><span class="section-number">3.5. </span>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">2.3.5. </span>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h2>
 <section id="modules">
-<h3><span class="section-number">3.5.1. </span>modules<a class="headerlink" href="#modules" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.3.5.1. </span>modules<a class="headerlink" href="#modules" title="Permalink to this headline">#</a></h3>
 <p>You can install modules compiled and provided by the HPC team. See Chapter 4.1.</p>
 </section>
 <section id="pip">
-<h3><span class="section-number">3.5.2. </span>pip<a class="headerlink" href="#pip" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.3.5.2. </span>pip<a class="headerlink" href="#pip" title="Permalink to this headline">#</a></h3>
 </section>
 <section id="conda">
-<h3><span class="section-number">3.5.3. </span>conda<a class="headerlink" href="#conda" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.3.5.3. </span>conda<a class="headerlink" href="#conda" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/install/linux.html">https://conda.io/projects/conda/en/latest/user-guide/install/linux.html</a></p>
 <p>You can use <code class="docutils literal notranslate"><span class="pre">env.yaml</span></code> file to list your dependencies an update them.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">myenv</span>
@@ -602,7 +602,7 @@ conda<span class="w"> </span>config<span class="w"> </span>--set<span class="w">
 </div>
 </section>
 <section id="mamba">
-<h3><span class="section-number">3.5.4. </span>mamba<a class="headerlink" href="#mamba" title="Permalink to this headline">#</a></h3>
+<h3><span class="section-number">2.3.5.4. </span>mamba<a class="headerlink" href="#mamba" title="Permalink to this headline">#</a></h3>
 <p>Mamba is a faster version of conda, although with libmamba in conda, it’s usage is now more limited.</p>
 <p><a class="reference external" href="https://github.com/conda-forge/miniforge">https://github.com/conda-forge/miniforge</a></p>
 <p>curl -L -O “<a class="reference external" href="https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-">https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-</a><span class="math notranslate nohighlight">\((uname)-\)</span>(uname -m).sh”
@@ -612,8 +612,6 @@ bash Mambaforge-<span class="math notranslate nohighlight">\((uname)-\)</span>(u
 CONDA_PKGS_PATH=\)</span>VSC_DATA_VO_USER/mambaforge/pkgs</p>
 </section>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -647,13 +645,13 @@ CONDA_PKGS_PATH=\)</span>VSC_DATA_VO_USER/mambaforge/pkgs</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Your local setup</p>
+            <p class="prev-next-title"><span class="section-number">2.2. </span>Your local setup</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="dependencies.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">3.6. </span>Dependencies</p>
+        <p class="prev-next-title"><span class="section-number">2.4. </span>Dependencies</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

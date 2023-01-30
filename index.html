@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Prerequisites" href="prerequisites.html" />
+    <link rel="next" title="1. Interactive sessions" href="interactive.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -114,18 +114,13 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="prerequisites.html">
-   1. Prerequisites
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="local_setup.html">
-   2. Your local setup
+  <a class="reference internal" href="interactive.html">
+   1. Interactive sessions
   </a>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="hpc_setup.html">
-   3. Your HPC setup
+  <a class="reference internal" href="jobs.html">
+   2. Running jobs
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -134,25 +129,30 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="prerequisites.html">
+     2.1. Prerequisites
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="local_setup.html">
+     2.2. Your local setup
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hpc_setup.html">
+     2.3. Your HPC setup
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="dependencies.html">
-     3.6. Dependencies
+     2.4. Dependencies
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="jobs.html">
-   4. Running jobs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="interactive.html">
-   5. Remote Desktop and Visualisations
-  </a>
- </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="advanced_topics.html">
-   6. Advanced topics
+   3. Advanced topics
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -162,19 +162,19 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="gpu.html">
-     6.2. GPU
+     3.2. GPU
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="benchmarking.html">
-     6.3. Benchmarking
+     3.3. Benchmarking
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="contribute.html">
-   7. Contribute
+   4. Contribute
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -184,17 +184,17 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="markdown.html">
-     7.1. Markdown Files
+     4.1. Markdown Files
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="notebooks.html">
-     7.2. Content with notebooks
+     4.2. Content with notebooks
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="markdown-notebooks.html">
-     7.3. Notebooks with MyST Markdown
+     4.3. Notebooks with MyST Markdown
     </a>
    </li>
   </ul>
@@ -381,24 +381,42 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="welcome-to-the-dambi-hpc-guide">
 <h1>Welcome to the DaMBi HPC Guide<a class="headerlink" href="#welcome-to-the-dambi-hpc-guide" title="Permalink to this headline">#</a></h1>
 <p>This is a collection of best-practices in High-Performance Computing for Bioinformatics. While generally applicable, some information is specific to the <a class="reference external" href="https://www.ugent.be/hpc/en/infrastructure">UGent HPC infrastructure</a>.</p>
-<p>Below is a list of other UGent resources with more detailed information:</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Be sure to read <a class="reference external" href="https://www.ugent.be/hpc/en/support/documentation.htm">Chapter 1 to 3 of the UGent HPC guide</a> first, as this will allow you to connect to the HPC!</p>
+</div>
+<p>The guide material builds over three levels:</p>
+<ol class="simple">
+<li><p><strong>Beginner</strong>: interactive sessions (RStudio, Jupyter Notebook) via <em>Open OnDemand</em></p>
 <ul class="simple">
-<li><p>VSC HPC tutorial: <a class="reference external" href="http://hpcugent.github.io/vsc_user_docs/pdf/intro-HPC-linux-gent.pdf">http://hpcugent.github.io/vsc_user_docs/pdf/intro-HPC-linux-gent.pdf</a></p></li>
+<li><p>for a general audience</p></li>
+</ul>
+</li>
+<li><p><strong>Intermediate</strong>: running jobs</p>
+<ul class="simple">
+<li><p>for bioinformaticians with long-running pipelines or multiple datasets</p></li>
+</ul>
+</li>
+<li><p><strong>Advanced</strong>: advanced topics like acceleration, frameworks and more</p>
+<ul class="simple">
+<li><p>for advanced users</p></li>
+</ul>
+</li>
+</ol>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="interactive.html">1. Interactive sessions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jobs.html">2. Running jobs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced_topics.html">3. Advanced topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribute.html">4. Contribute</a></li>
+</ul>
+</div>
+<p>Below is a list of other UGent resources with more general information:</p>
+<ul class="simple">
 <li><p>Webinar: <a class="reference external" href="https://www.ugent.be/hpc/en/training/introhpcugent-recording">https://www.ugent.be/hpc/en/training/introhpcugent-recording</a></p></li>
 <li><p>Slides: <a class="reference external" href="https://www.ugent.be/hpc/en/training/2022/introhpc202205">https://www.ugent.be/hpc/en/training/2022/introhpc202205</a></p></li>
 <li><p>User support: <a class="reference external" href="https://www.ugent.be/hpc/en/support">https://www.ugent.be/hpc/en/support</a></p></li>
 </ul>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="prerequisites.html">1. Prerequisites</a></li>
-<li class="toctree-l1"><a class="reference internal" href="local_setup.html">2. Your local setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hpc_setup.html">3. Your HPC setup</a></li>
-<li class="toctree-l1"><a class="reference internal" href="jobs.html">4. Running jobs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive.html">5. Remote Desktop and Visualisations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced_topics.html">6. Advanced topics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="contribute.html">7. Contribute</a></li>
-</ul>
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -428,10 +446,10 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='right-next' id="next-link" href="prerequisites.html" title="next page">
+    <a class='right-next' id="next-link" href="interactive.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Prerequisites</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Interactive sessions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
