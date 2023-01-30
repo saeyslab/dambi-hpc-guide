@@ -131,22 +131,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="prerequisites.html">
-     2.1. Prerequisites
+     2.3. Prerequisites
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="local_setup.html">
-     2.2. Your local setup
+     2.4. Your local setup
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="hpc_setup.html">
-     2.3. Your HPC setup
+     2.5. Your HPC setup
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dependencies.html">
-     2.4. Dependencies
+     2.6. Dependencies
     </a>
    </li>
   </ul>
@@ -378,8 +378,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#interactive-rstudio">
-   1.1. Interactive RStudio
+  <a class="reference internal nav-link" href="#launching-an-interactive-rstudio-session">
+   1.1. Launching an interactive RStudio session
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -390,13 +390,8 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-the-job-composer">
-   1.2. Using the Job Composer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#links-with-further-documentation">
-   1.3. Links with further documentation
+   1.2. Links with further documentation
   </a>
  </li>
 </ul>
@@ -419,8 +414,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#interactive-rstudio">
-   1.1. Interactive RStudio
+  <a class="reference internal nav-link" href="#launching-an-interactive-rstudio-session">
+   1.1. Launching an interactive RStudio session
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -431,13 +426,8 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#using-the-job-composer">
-   1.2. Using the Job Composer
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#links-with-further-documentation">
-   1.3. Links with further documentation
+   1.2. Links with further documentation
   </a>
  </li>
 </ul>
@@ -456,8 +446,8 @@ title="Print to PDF"
 <p class="admonition-title">Important</p>
 <p>Read <a class="reference external" href="https://www.ugent.be/hpc/en/support/documentation.htm">Chapter 8 “Using the HPC-UGent web portal”</a> of the HPC Documentation first, as this gives a general introduction to Open OnDemand.</p>
 </div>
-<section id="interactive-rstudio">
-<h2><span class="section-number">1.1. </span>Interactive RStudio<a class="headerlink" href="#interactive-rstudio" title="Permalink to this headline">#</a></h2>
+<section id="launching-an-interactive-rstudio-session">
+<h2><span class="section-number">1.1. </span>Launching an interactive RStudio session<a class="headerlink" href="#launching-an-interactive-rstudio-session" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Login at <a class="reference external" href="https://login.hpc.ugent.be">https://login.hpc.ugent.be</a></p></li>
 <li><p>Select Interactive Apps &gt; RStudio Server</p>
@@ -480,6 +470,10 @@ title="Print to PDF"
 <li><p>Paste the script you want to run, which should also install all dependencies with e.g. <code class="docutils literal notranslate"><span class="pre">BiocManager</span></code></p></li>
 <li><p>Use the Files interface at the Dashboard to upload your data and download the output files</p></li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure to delete your interactive session when not needed anymore, as your queueing priority gets downgrading when wasting HPC compute resources.</p>
+</div>
 <section id="i-need-more-than-27gb-of-ram">
 <h3><span class="section-number">1.1.1. </span>I need more than 27GB of RAM<a class="headerlink" href="#i-need-more-than-27gb-of-ram" title="Permalink to this headline">#</a></h3>
 <p>You can’t go over the 27GB limit for the <code class="docutils literal notranslate"><span class="pre">slaking</span></code> cluster and only work on a subset of your data to create/debug a script without waiting too long.</p>
@@ -502,15 +496,11 @@ title="Print to PDF"
 <p class="admonition-title">Note</p>
 <p>You can view the maximum memory of a node at <a class="reference external" href="https://www.ugent.be/hpc/en/infrastructure">https://www.ugent.be/hpc/en/infrastructure</a>. You can determine your required memory using the <a class="reference external" href="https://support.posit.co/hc/en-us/articles/1500005616261-Understanding-Memory-Usage-in-the-RStudio-IDE">RStudio memory widget</a> when analyzing a subset of your total data.</p>
 </div>
-<p>Ideally, you don’t active wait on queued jobs, but further improve your script on the debugging cluster using a subset of your total data.</p>
+<p>Ideally, you don’t active wait on a big interactive sessions to become available or on queued jobs, but further improve your script on the debugging cluster using a subset of your total data. Be sure to check the email notification option.</p>
 </section>
-</section>
-<section id="using-the-job-composer">
-<h2><span class="section-number">1.2. </span>Using the Job Composer<a class="headerlink" href="#using-the-job-composer" title="Permalink to this headline">#</a></h2>
-<p>If the waiting time is too long or you need more resources, you can launch your script as a job via the <a class="reference external" href="https://login.hpc.ugent.be/pun/sys/myjobs">Job Composer</a>.</p>
 </section>
 <section id="links-with-further-documentation">
-<h2><span class="section-number">1.3. </span>Links with further documentation<a class="headerlink" href="#links-with-further-documentation" title="Permalink to this headline">#</a></h2>
+<h2><span class="section-number">1.2. </span>Links with further documentation<a class="headerlink" href="#links-with-further-documentation" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://osc.github.io/ood-documentation/master/">Open OnDemand Documentation</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=4-w-4wjlnPk">A video walkthrough</a></p></li>

@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2.1. Prerequisites" href="prerequisites.html" />
+    <link rel="next" title="2.3. Prerequisites" href="prerequisites.html" />
     <link rel="prev" title="1. Interactive sessions" href="interactive.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -131,22 +131,22 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="prerequisites.html">
-     2.1. Prerequisites
+     2.3. Prerequisites
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="local_setup.html">
-     2.2. Your local setup
+     2.4. Your local setup
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="hpc_setup.html">
-     2.3. Your HPC setup
+     2.5. Your HPC setup
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="dependencies.html">
-     2.4. Dependencies
+     2.6. Dependencies
     </a>
    </li>
   </ul>
@@ -355,12 +355,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#job-composer">
+   2.1. Job Composer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#job-scripts">
+   2.2. Job scripts
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -372,6 +401,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#job-composer">
+   2.1. Job Composer
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#job-scripts">
+   2.2. Job scripts
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -381,6 +428,14 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="running-jobs">
 <h1><span class="section-number">2. </span>Running jobs<a class="headerlink" href="#running-jobs" title="Permalink to this headline">#</a></h1>
+<section id="job-composer">
+<h2><span class="section-number">2.1. </span>Job Composer<a class="headerlink" href="#job-composer" title="Permalink to this headline">#</a></h2>
+<p>If the waiting time for an interactive session is too long or you need more resources, you can launch your script as a job via the <a class="reference external" href="https://login.hpc.ugent.be/pun/sys/myjobs">Job Composer</a>.</p>
+<p>You can edit the script via the Open OnDemand File manager or an interactive session on the debugging cluster.</p>
+</section>
+<section id="job-scripts">
+<h2><span class="section-number">2.2. </span>Job scripts<a class="headerlink" href="#job-scripts" title="Permalink to this headline">#</a></h2>
+<p>You can launch scripts by yourself without the interactive Job Composer.</p>
 <p>Job scripts specify three things: the computational resources being requested (memory, cores, walltime, etc.), the necessary software, and the actual computations. We illustrate this with an example job script.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#PBS -N count_example # job name</span>
@@ -401,6 +456,7 @@ python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;p
 To submit this job to the cluster, we first have to choose a cluster to run it on. By default, jobs are submitted to the victini cluster. This cluster is fine for most jobs, but does not have GPUs. If you want to use a GPU, you will have to switch to either the joltik or accelgor clusters. You can do this using the module swap command: e.g. module swap cluster/joltik. For a list of available clusters, see <a class="reference external" href="https://www.ugent.be/hpc/en/infrastructure">https://www.ugent.be/hpc/en/infrastructure</a>.</p>
 <p>After the cluster has been specified, the job can be submitted using the qsub command: e.g. <code class="docutils literal notranslate"><span class="pre">qsub</span> <span class="pre">script.sh</span></code>. This command will return the job ID of the submitted job. To check on the status of a submitted job, use the <code class="docutils literal notranslate"><span class="pre">qstat</span></code> command. To delete a job that is currently in queue or running, use the qdel command with the appropriate job ID.
 When the job is done, two files will be saved in the directory where the job was submitted from: and output file <code class="docutils literal notranslate"><span class="pre">(*.o*)</span></code> and an error file <code class="docutils literal notranslate"><span class="pre">(*.e*)</span></code>. These files contain the <code class="docutils literal notranslate"><span class="pre">STDOUT</span></code> and <code class="docutils literal notranslate"><span class="pre">STDERR</span></code> of the job, respectively. You can use standard output redirection to make sure your output gets saved somewhere else (as we do in the example).</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -442,7 +498,7 @@ When the job is done, two files will be saved in the directory where the job was
     <a class='right-next' id="next-link" href="prerequisites.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.1. </span>Prerequisites</p>
+        <p class="prev-next-title"><span class="section-number">2.3. </span>Prerequisites</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
