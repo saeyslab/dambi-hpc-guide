@@ -19,6 +19,7 @@ chapters:
   sections:
   - file: gpu
   - file: benchmarking
+  - file: multinode
 - file: contribute
   sections:
   - file: markdown
