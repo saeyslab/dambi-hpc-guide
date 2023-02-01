@@ -1,0 +1,9 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	"postCreateCommand": "pip3 install --user -r requirements.txt",
+	"forwardPorts": [8000],
+	"postStartCommand": "sphinx-autobuild dambi_hpc_guide dambi_hpc_guide/_build/html -b html"
+}

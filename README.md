@@ -21,6 +21,12 @@ To automatically build on changes during development, you can alternatively run 
 sphinx-autobuild dambi_hpc_guide dambi_hpc_guide/_build/html -b html
 ```
 
+You can also set up a reproducible development in VS code using the [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers) functionality. After the dev container is set up the `sphinx-autobuild` command serves the book on localhost port 8000.
+
+The book can also be built using Docker.
+1. Build the Docker image with `docker build -t dambihpcguide .`
+2. Build the book with `docker run --rm -v /path/to/save/book:/book/dambi_hpc_guide/_build dambihpcguide`
+
 ### Hosting the book
 
 Please see the [Jupyter Book documentation](https://jupyterbook.org/publish/web.html) to discover options for deploying a book online using services such as GitHub, GitLab, or Netlify.
