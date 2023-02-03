@@ -10,7 +10,7 @@ resource gaps on partially used nodes and schedule your jobs quicker.
 Not any program or script can take advantage of multi-node computing. Generally, there are two ways to adapt or write
 a program for multi-node computing:
 1. Write the program using a framework capable of distributed computing, such as [Dask](https://www.dask.org/) for
-   Python or [NextFlow](https://www.nextflow.io/docs/latest/index.html).
+   Python or [Nextflow](https://www.nextflow.io/docs/latest/index.html).
 2. Using the split-apply-combine approach: partition the data, process each partition separately and merge the processed
    partitions.
 
@@ -20,8 +20,14 @@ be applied if each part of the dataset can be processed independently.
 
 ## Using a framework
 
+Frameworks such as Dask and Nextflow can take advantage of multi-node computing. Nextflow implements this through
+[executors](https://www.nextflow.io/docs/latest/executor.html). Because the UGhent HPC uses the SLURM resource manager,
+we need the Nextflow SLURM executor. Dask has a few possibilities which we discuss below.
+
+### `dask-mpi`
+
 Dask can be executed on multiple nodes using the [`dask-mpi`](http://mpi.dask.org/en/latest/), which allows for an easy
-setup of a Dask cluster in an existing MPI environment. The HPC provides an existing MPI environment that can be used
+setup of a Dask cluster in an existing MPI environment. The HPC provides an MPI environment that can be used
 through the [mympirun](https://github.com/hpcugent/vsc-mympirun) module.
 
 `dask-mpi` can be used in Dask by including the following code at the top of your Dask script
@@ -40,4 +46,11 @@ We can launch MPI processes on the HPC with the following job submission script
 By setting `nodes` larger than 1, we can run the application in a multinode setting. Keep in mind that it is not
 guaranteed that each process runs on a separate node, the HPC job scheduler decides what is optimal.
 
+### `dask-jobqueue`
+
+[`dask-jobqueue`](https://jobqueue.dask.org/en/latest/) directly uses the job queue system (SLURM) to setup a Dask
+cluster. 
+
 ## Split-apply-combine
+
+[`atools`](https://github.com/gjbex/atools) module for easily working with job arrays on the HPC.
