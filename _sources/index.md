@@ -9,11 +9,11 @@ Be sure to read [Chapter 1 to 3 of the UGent HPC guide](https://www.ugent.be/hpc
 The guide material builds up in three levels:
 
 1. **Beginner**: interactive sessions (RStudio, Jupyter Notebook) via *Open OnDemand*
-    - for a general audience
+    - for **any user** in need of large data storage or computational resources 
 2. **Intermediate**: running jobs 
-    - for bioinformaticians with long-running pipelines or multiple datasets
+    - for **bioinformaticians** with long-running pipelines or multiple datasets
 3. **Advanced**: advanced topics like acceleration, frameworks and more
-    - for advanced users
+    - for **experienced HPC users**
 
 ```{tableofcontents}
 ```
