@@ -1,7 +1,7 @@
 # Interactive sessions
 
 ```{important}
-Read [Chapter 8 "Using the HPC-UGent web portal"](https://www.ugent.be/hpc/en/support/documentation.htm) of the HPC Documentation first, as this gives a general introduction to Open OnDemand.
+Read [Chapter 8 "Using the HPC-UGent web portal"](https://www.ugent.be/hpc/en/support/documentation.htm) of the HPC Documentation first, as this gives a general  to Open OnDemand.
 ```
 
 Interactive sessions offers familiar interfaces like RStudio, Jupyter Notebooks or a Remote Desktop, but on remote HPC infrastructure. For the UGent HPC, this means you have remote access to a free, always-on *desktop-in-the-cloud* with at minimum 8 cores, 27GB RAM and 25GB of storage.
