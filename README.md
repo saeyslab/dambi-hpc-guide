@@ -1,6 +1,6 @@
 # DaMBi HPC Guide
 
-Basic and Advanced usage of High-Performance Computing in Bioinformatics.
+Documentation site on Basic and Advanced usage of High-Performance Computing in Bioinformatics, hosted at [https://saeyslab.github.io/dambi-hpc-guide/](https://saeyslab.github.io/dambi-hpc-guide/).
 
 ## Usage
 
