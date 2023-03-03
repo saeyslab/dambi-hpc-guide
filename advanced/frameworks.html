@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>3.2. GPU &#8212; DaMBi HPC Guide</title>
+    <title>3.2. Frameworks &#8212; DaMBi HPC Guide</title>
   
   
   
@@ -16,53 +16,53 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-<link href="_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-<link href="_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/bootstrap.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=796348d33e8b1d947c94" rel="stylesheet">
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=796348d33e8b1d947c94" rel="stylesheet">
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2">
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=4ec06e9971c5264fbd345897d5258098f11cc577" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94">
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=8bf782fb4ee92b3d3646425e50f299c4e1fd152d"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'gpu';</script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3.3. Benchmarking" href="benchmarking.html" />
-    <link rel="prev" title="3. Advanced topics" href="advanced_topics.html" />
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'advanced/frameworks';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.3. Experiment Managment" href="experiment.html" />
+    <link rel="prev" title="3. Advanced topics" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -87,7 +87,7 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="search-button__overlay"></div>
     <div class="search-button__search-container">
       
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
@@ -106,7 +106,7 @@ const thebe_selector_output = ".output, .cell_output"
   
 
 
-<a class="navbar-brand logo" href="index.html">
+<a class="navbar-brand logo" href="../index.html">
 
   
   
@@ -117,8 +117,8 @@ const thebe_selector_output = ".output, .cell_output"
   
 
   
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image">
-    <img src="_static/logo.png" class="logo__image only-dark" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
   
   
 </a>
@@ -137,28 +137,28 @@ const thebe_selector_output = ".output, .cell_output"
     <ul id="navbar-main-elements" class="navbar-nav">
         
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="interactive/intro.html">
+                      <a class="nav-link nav-internal" href="../interactive/intro.html">
                         Interactive sessions
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="jobs/intro.html">
+                      <a class="nav-link nav-internal" href="../jobs/intro.html">
                         Running jobs
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="advanced_topics.html">
+                      <a class="nav-link nav-internal" href="intro.html">
                         Advanced topics
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="contribute.html">
+                      <a class="nav-link nav-internal" href="../contribute/intro.html">
                         Contribute
                       </a>
                     </li>
@@ -234,28 +234,28 @@ const thebe_selector_output = ".output, .cell_output"
     <ul id="navbar-main-elements" class="navbar-nav">
         
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="interactive/intro.html">
+                      <a class="nav-link nav-internal" href="../interactive/intro.html">
                         Interactive sessions
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="jobs/intro.html">
+                      <a class="nav-link nav-internal" href="../jobs/intro.html">
                         Running jobs
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="advanced_topics.html">
+                      <a class="nav-link nav-internal" href="intro.html">
                         Advanced topics
                       </a>
                     </li>
                 
 
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="contribute.html">
+                      <a class="nav-link nav-internal" href="../contribute/intro.html">
                         Contribute
                       </a>
                     </li>
@@ -294,7 +294,7 @@ const thebe_selector_output = ".output, .cell_output"
   
 
 
-<a class="navbar-brand logo" href="index.html">
+<a class="navbar-brand logo" href="../index.html">
 
   
   
@@ -305,14 +305,14 @@ const thebe_selector_output = ".output, .cell_output"
   
 
   
-    <img src="_static/logo.png" class="logo__image only-light" alt="Logo image">
-    <img src="_static/logo.png" class="logo__image only-dark" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image">
+    <img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image">
   
   
 </a>
     </div>
     <div class="sidebar-start-items__item">
-<form class="bd-search d-flex align-items-center" action="search.html" method="get">
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
@@ -323,35 +323,38 @@ const thebe_selector_output = ".output, .cell_output"
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="index.html">
+                <a class="reference internal" href="../index.html">
                     Welcome to the DaMBi HPC Guide
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="interactive/intro.html">1. Interactive sessions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="interactive/rstudio.html">1.3. RStudio</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactive/forwarding.html">1.4. Port Forwarding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactive/vscode.html">1.5. VS Code Remote</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../interactive/intro.html">1. Interactive sessions</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/rstudio.html">1.3. RStudio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/forwarding.html">1.4. Port Forwarding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../interactive/vscode.html">1.5. VS Code Remote</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="jobs/intro.html">2. Running jobs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="jobs/prerequisites.html">2.3. Prerequisites</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jobs/local_setup.html">2.4. Your local setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jobs/hpc_setup.html">2.5. Your HPC setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="jobs/dependencies.html">2.6. Dependencies</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../jobs/intro.html">2. Running jobs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jobs/prerequisites.html">2.3. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jobs/local_setup.html">2.4. Your local setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jobs/hpc_setup.html">2.5. Your HPC setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jobs/dependencies.html">2.6. Dependencies</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="advanced_topics.html">3. Advanced topics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. GPU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="benchmarking.html">3.3. Benchmarking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multinode.html">3.4. Multi-node computing</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">3. Advanced topics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.2. Frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment.html">3.3. Experiment Managment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydra.html">3.4. Hydra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu.html">3.5. GPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmarking.html">3.6. Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multinode.html">3.7. Multi-node computing</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="contribute.html">4. Contribute</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="markdown.html">4.1. Markdown Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks.html">4.2. Content with notebooks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="markdown-notebooks.html">4.3. Notebooks with MyST Markdown</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contribute/intro.html">4. Contribute</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/markdown.html">4.1. Markdown Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/notebooks.html">4.2. Content with notebooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contribute/markdown-notebooks.html">4.3. Notebooks with MyST Markdown</a></li>
 </ul>
 </li>
 </ul>
@@ -429,7 +432,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/saeyslab/dambi-hpc-guide/issues/new?title=Issue%20on%20page%20%2Fgpu.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/saeyslab/dambi-hpc-guide/issues/new?title=Issue%20on%20page%20%2Fadvanced/frameworks.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -454,7 +457,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="_sources/gpu.md" target="_blank"
+      <li><a href="../_sources/advanced/frameworks.md" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -497,7 +500,7 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>GPU</h1>
+    <h1>Frameworks</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -508,14 +511,50 @@ title="Print to PDF"
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pytorch">
-   3.2.1. PyTorch
+  <a class="reference internal nav-link" href="#multi-language">
+   3.2.1. Multi-language
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nextflow">
+     3.2.1.1. Nextflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apache-spark">
+     3.2.1.2. Apache Spark
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apache-airflow">
+     3.2.1.3. Apache Airflow
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gpu-usage">
-   3.2.2. GPU Usage
+  <a class="reference internal nav-link" href="#python">
+   3.2.2. Python
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dask">
+     3.2.2.1. Dask
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#r">
+   3.2.3. R
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qsub">
+     3.2.3.1. qsub
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -526,37 +565,48 @@ title="Print to PDF"
 
             <article class="bd-article" role="main">
               
-  <section class="tex2jax_ignore mathjax_ignore" id="gpu">
-<h1><span class="section-number">3.2. </span>GPU<a class="headerlink" href="#gpu" title="Permalink to this heading">#</a></h1>
-<p>Documentation for using the GPU cluster joltik or accelgor is provided in the manual under Chapter 21 “HPC-UGent GPU cluster”.</p>
-<p>When using a GPU cluster, first try a simple test script to see if your GPU is properly requested. This can usually be done using a single line of Python, e.g. <code class="docutils literal notranslate"><span class="pre">torch.cuda.is</span> <span class="pre">available()</span></code> in Pytorch.</p>
-<section id="pytorch">
-<h2><span class="section-number">3.2.1. </span>PyTorch<a class="headerlink" href="#pytorch" title="Permalink to this heading">#</a></h2>
-<p>A pre-built PyTorch module is provided on joltik. Loading this module sets up python, CUDA, and pytorch.</p>
-<p>When using this module, you could run into some versioning issues. A solution can be switching to loading the python and CUDA module separately, and using a virtualenv with pytorch installed.</p>
-<p>A qsub script for DL with pytorch could look like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-
-<span class="c1">#PBS -l nodes=1:gpus=1</span>
-<span class="c1">#PBS -l walltime=4:00:00</span>
-
-<span class="c1"># load modules</span>
-module<span class="w"> </span>load<span class="w"> </span>Python
-module<span class="w"> </span>load<span class="w"> </span>CUDA
-
-<span class="c1"># load virtualenv</span>
-<span class="nb">source</span><span class="w"> </span><span class="nv">$VSC_HOME</span>/dl/bin/activate
-
-<span class="c1"># run GPU-accelerated script</span>
-<span class="c1"># NOTE: Specifically point to the python binary in the virtualenv.</span>
-<span class="c1"># Module loading places the system-wide python before the virtualenv python.</span>
-<span class="nv">$VSC_HOME</span>/dl/bin/python<span class="w"> </span><span class="nv">$VSC_HOME</span>/train.py
-</pre></div>
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="frameworks">
+<h1><span class="section-number">3.2. </span>Frameworks<a class="headerlink" href="#frameworks" title="Permalink to this heading">#</a></h1>
+<p>Instead of running your code or shell scripts directly on the HPC, it can be easier to use a higher-level framework to handle the job submissions for you. We can organize them by language support:</p>
+<section id="multi-language">
+<h2><span class="section-number">3.2.1. </span>Multi-language<a class="headerlink" href="#multi-language" title="Permalink to this heading">#</a></h2>
+<p>You can use any language in any framework by calling a script, but some frameworks make it much more convenient and allow you to set the execution environment.</p>
+<section id="nextflow">
+<h3><span class="section-number">3.2.1.1. </span>Nextflow<a class="headerlink" href="#nextflow" title="Permalink to this heading">#</a></h3>
+<p>Any script</p>
 </section>
-<section id="gpu-usage">
-<h2><span class="section-number">3.2.2. </span>GPU Usage<a class="headerlink" href="#gpu-usage" title="Permalink to this heading">#</a></h2>
-<p>For seeing the GPU Usage, you can use <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>, <code class="docutils literal notranslate"><span class="pre">nvtop</span></code>, <code class="docutils literal notranslate"><span class="pre">nvitop</span></code>.</p>
+<section id="apache-spark">
+<h3><span class="section-number">3.2.1.2. </span>Apache Spark<a class="headerlink" href="#apache-spark" title="Permalink to this heading">#</a></h3>
+<p>Python/Java/R</p>
+</section>
+<section id="apache-airflow">
+<h3><span class="section-number">3.2.1.3. </span>Apache Airflow<a class="headerlink" href="#apache-airflow" title="Permalink to this heading">#</a></h3>
+<p>Any script</p>
+</section>
+</section>
+<section id="python">
+<h2><span class="section-number">3.2.2. </span>Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Dask</p>
+<ul>
+<li><p>very easy to get started and great ecosystem (numpy, pandas, xarray, SpatialData…)</p></li>
+</ul>
+</li>
+<li><p>Ray</p>
+<ul>
+<li><p>a very low level and high performance framework</p></li>
+</ul>
+</li>
+</ul>
+<section id="dask">
+<h3><span class="section-number">3.2.2.1. </span>Dask<a class="headerlink" href="#dask" title="Permalink to this heading">#</a></h3>
+</section>
+</section>
+<section id="r">
+<h2><span class="section-number">3.2.3. </span>R<a class="headerlink" href="#r" title="Permalink to this heading">#</a></h2>
+<section id="qsub">
+<h3><span class="section-number">3.2.3.1. </span>qsub<a class="headerlink" href="#qsub" title="Permalink to this heading">#</a></h3>
+</section>
 </section>
 </section>
 
@@ -573,7 +623,7 @@ module<span class="w"> </span>load<span class="w"> </span>CUDA
         },
         kernelOptions: {
             name: "python3",
-            path: "./."
+            path: "./advanced"
         },
         predefinedOutput: true
     }
@@ -588,17 +638,17 @@ module<span class="w"> </span>load<span class="w"> </span>CUDA
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="advanced_topics.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
           <p class="prev-next-title"><span class="section-number">3. </span>Advanced topics</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="benchmarking.html" title="next page">
+  <a class='right-next' id="next-link" href="experiment.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title"><span class="section-number">3.3. </span>Benchmarking</p>
+      <p class="prev-next-title"><span class="section-number">3.3. </span>Experiment Managment</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -619,14 +669,50 @@ module<span class="w"> </span>load<span class="w"> </span>CUDA
 <nav id="bd-toc-nav" class="page-toc">
     <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pytorch">
-   3.2.1. PyTorch
+  <a class="reference internal nav-link" href="#multi-language">
+   3.2.1. Multi-language
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#nextflow">
+     3.2.1.1. Nextflow
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apache-spark">
+     3.2.1.2. Apache Spark
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#apache-airflow">
+     3.2.1.3. Apache Airflow
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#gpu-usage">
-   3.2.2. GPU Usage
+  <a class="reference internal nav-link" href="#python">
+   3.2.2. Python
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dask">
+     3.2.2.1. Dask
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#r">
+   3.2.3. R
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#qsub">
+     3.2.3.1. qsub
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -682,8 +768,8 @@ Last updated on None.<br>
   
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=796348d33e8b1d947c94"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=796348d33e8b1d947c94"></script>
 
   </body>
 </html>

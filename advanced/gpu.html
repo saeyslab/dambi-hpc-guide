@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>2.4. Your local setup &#8212; DaMBi HPC Guide</title>
+    <title>3.5. GPU &#8212; DaMBi HPC Guide</title>
   
   
   
@@ -58,11 +58,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'jobs/local_setup';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'advanced/gpu';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2.5. Your HPC setup" href="hpc_setup.html" />
-    <link rel="prev" title="2.3. Prerequisites" href="prerequisites.html" />
+    <link rel="next" title="3.6. Benchmarking" href="benchmarking.html" />
+    <link rel="prev" title="3.4. Hydra" href="hydra.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="docsearch:language" content="en">
   </head>
@@ -143,15 +143,15 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="intro.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../jobs/intro.html">
                         Running jobs
                       </a>
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../advanced/intro.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="intro.html">
                         Advanced topics
                       </a>
                     </li>
@@ -206,6 +206,10 @@ const thebe_selector_output = ".output, .cell_output"
   
 
   
+  <label class="sidebar-toggle secondary-toggle" for="__secondary">
+      <span class="fa-solid fa-outdent"></span>
+  </label>
+  
 
 </div>
   </nav>
@@ -236,15 +240,15 @@ const thebe_selector_output = ".output, .cell_output"
                     </li>
                 
 
-                    <li class="nav-item current active">
-                      <a class="nav-link nav-internal" href="intro.html">
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../jobs/intro.html">
                         Running jobs
                       </a>
                     </li>
                 
 
-                    <li class="nav-item">
-                      <a class="nav-link nav-internal" href="../advanced/intro.html">
+                    <li class="nav-item current active">
+                      <a class="nav-link nav-internal" href="intro.html">
                         Advanced topics
                       </a>
                     </li>
@@ -331,20 +335,20 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../interactive/vscode.html">1.5. VS Code Remote</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">2. Running jobs</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="prerequisites.html">2.3. Prerequisites</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">2.4. Your local setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hpc_setup.html">2.5. Your HPC setup</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dependencies.html">2.6. Dependencies</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../jobs/intro.html">2. Running jobs</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jobs/prerequisites.html">2.3. Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jobs/local_setup.html">2.4. Your local setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jobs/hpc_setup.html">2.5. Your HPC setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../jobs/dependencies.html">2.6. Dependencies</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../advanced/intro.html">3. Advanced topics</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/frameworks.html">3.2. Frameworks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/experiment.html">3.3. Experiment Managment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/hydra.html">3.4. Hydra</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/gpu.html">3.5. GPU</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/benchmarking.html">3.6. Benchmarking</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced/multinode.html">3.7. Multi-node computing</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">3. Advanced topics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="frameworks.html">3.2. Frameworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="experiment.html">3.3. Experiment Managment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hydra.html">3.4. Hydra</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">3.5. GPU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmarking.html">3.6. Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multinode.html">3.7. Multi-node computing</a></li>
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../contribute/intro.html">4. Contribute</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
@@ -428,7 +432,7 @@ title="Source repository"
 </a>
 </a>
       
-      <li><a href="https://github.com/saeyslab/dambi-hpc-guide/issues/new?title=Issue%20on%20page%20%2Fjobs/local_setup.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/saeyslab/dambi-hpc-guide/issues/new?title=Issue%20on%20page%20%2Fadvanced/gpu.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -453,7 +457,7 @@ title="Open an issue"
     <i class="fas fa-download"></i>
   </button>
   <ul class="dropdown-menu">
-      <li><a href="../_sources/jobs/local_setup.md" target="_blank"
+      <li><a href="../_sources/advanced/gpu.md" target="_blank"
    class="btn btn-sm dropdown-item"
    data-toggle="tooltip"
 data-placement="left"
@@ -486,7 +490,9 @@ title="Print to PDF"
       
   </ul>
 </div>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary" data-toggle="tooltip" data-placement="left" title="Toggle secondary sidebar">
+            <span class="fa-solid fa-list"></span>
+        </label>
     </div>
 </div>
             </div>
@@ -494,25 +500,140 @@ title="Print to PDF"
             
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Your local setup</h1>
+    <h1>GPU</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slurm">
+   3.5.1. SLURM
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memory">
+   3.5.2. Memory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pytorch">
+   3.5.3. PyTorch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pytorch-lightning">
+   3.5.4. Pytorch Lightning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gpu-usage">
+   3.5.5. GPU Usage
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
 
             <article class="bd-article" role="main">
               
-  <section class="tex2jax_ignore mathjax_ignore" id="your-local-setup">
-<h1><span class="section-number">2.4. </span>Your local setup<a class="headerlink" href="#your-local-setup" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="gpu">
+<h1><span class="section-number">3.5. </span>GPU<a class="headerlink" href="#gpu" title="Permalink to this heading">#</a></h1>
+<p>GPU acceleration can greatly speedup workloads that are compute-bound, like computer vision and deep learning. The HPC-UGent provides a GPU cluster for this purpose.
+Usually it is best to develop your code or job submission on an interactive debugging CPU cluster (slaking) with a small data subset and submit larger non-interactive jobs on the GPU clusters.</p>
+<p>Documentation for using the GPU cluster joltik or accelgor is provided in the manual under Chapter 21 “HPC-UGent GPU cluster”. General information for GPU SLURM job submissions is also provided <a class="reference external" href="https://hpc.vub.be/docs/job-submission/gpu-job-types/">at the VUB HPC documentation</a>.</p>
+<p>When using a GPU cluster, first try a simple test script to see if your GPU is properly requested. This can usually be done using a single line of Python, e.g. <code class="docutils literal notranslate"><span class="pre">torch.cuda.is</span> <span class="pre">available()</span></code> in Pytorch.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>First setup CPU job submissions before you start with GPU jobs.</p>
+</div>
+<section id="slurm">
+<h2><span class="section-number">3.5.1. </span>SLURM<a class="headerlink" href="#slurm" title="Permalink to this heading">#</a></h2>
+<p>The differences between a CPU and GPU cluster submission are:</p>
 <ul class="simple">
-<li><p>Have your project or script in a git repo, so you can sync changes between your laptop, workstation, HPC system…</p></li>
-<li><p>List all your dependencies in a file, like a conda <code class="docutils literal notranslate"><span class="pre">env.yaml</span></code> or a pip <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file.</p></li>
-<li><p>Have a small test function to see if you can run your script, like a <code class="docutils literal notranslate"><span class="pre">--help</span></code> flag or unit tests.</p></li>
-<li><p>Be able to define the location of input and output folders via options or environment variables, as you will need to use write to</p></li>
+<li><p>the choice of cluster</p></li>
+<li><p>parameters in your script to use the GPU</p></li>
+<li><p>installation of a GPU driver and framework like CUDA.</p></li>
 </ul>
+<p>First see which GPU cluster is the least occupied. Note that nodes can have multiple GPU’s (4 GPU’s per node for joltik and accelgor), so for any partially free node there is probably at least 1 GPU fully available.</p>
+<p>Switch to a GPU cluster</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">motd</span>
+<span class="n">ml</span> <span class="n">switch</span> <span class="n">cluster</span><span class="o">/</span><span class="n">joltik</span>
+</pre></div>
+</div>
+<p>Install CUDA</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ml</span> <span class="n">load</span> <span class="n">CUDA</span>
+</pre></div>
+</div>
+<p>As an example, here we use <a class="reference internal" href="frameworks.html"><span class="doc std std-doc">Hydra</span></a> and the <a class="reference external" href="https://hydra.cc/docs/plugins/submitit_launcher/">submitit_slurm plugin</a> to submit the jobs to SLURM.
+Run a SLURM job with 1 GPU, 5 CPUs and 5GB of RAM in the background, given we run 1 task per node.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HYDRA_FULL_ERROR</span><span class="o">=</span><span class="mi">1</span> <span class="n">hydra</span> <span class="n">my_script</span><span class="o">.</span><span class="n">py</span> <span class="n">hydra</span><span class="o">/</span><span class="n">launcher</span><span class="o">=</span><span class="n">submitit_slurm</span> <span class="n">hydra</span><span class="o">.</span><span class="n">launcher</span><span class="o">.</span><span class="n">nodes</span><span class="o">=</span><span class="mi">1</span> <span class="n">hydra</span><span class="o">.</span><span class="n">launcher</span><span class="o">.</span><span class="n">gpus</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">node</span><span class="o">=</span><span class="mi">1</span> <span class="n">hydra</span><span class="o">.</span><span class="n">launcher</span><span class="o">.</span><span class="n">cpus</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">gpu</span><span class="o">=</span><span class="mi">5</span> <span class="n">hydra</span><span class="o">.</span><span class="n">launcher</span><span class="o">.</span><span class="n">mem</span><span class="o">-</span><span class="n">per</span><span class="o">-</span><span class="n">gpu</span><span class="o">=</span><span class="mi">5</span><span class="n">GB</span> <span class="n">device</span><span class="o">=</span><span class="n">cuda</span> <span class="o">-</span><span class="n">m</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">gpus-per-node</span></code> is preferred over <code class="docutils literal notranslate"><span class="pre">gpus-per-task</span></code> and <code class="docutils literal notranslate"><span class="pre">gpus</span></code> because of <a class="reference external" href="https://hpc.vub.be/docs/job-submission/gpu-job-types/#gpu-job-types">GPU and CPU locality</a>. Use <code class="docutils literal notranslate"><span class="pre">cpus-per-gpu</span></code> and <code class="docutils literal notranslate"><span class="pre">ntasks-per-gpu</span></code> to set number of CPUs and tasks.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you get a resource error like this, make sure you’re switched to a GPU cluster:
+<code class="docutils literal notranslate"><span class="pre">submitit.core.utils.FailedJobError:</span> <span class="pre">sbatch:</span> <span class="pre">error:</span> <span class="pre">Batch</span> <span class="pre">job</span> <span class="pre">submission</span> <span class="pre">failed:</span> <span class="pre">Invalid</span> <span class="pre">generic</span> <span class="pre">resource</span> <span class="pre">(gres)</span> <span class="pre">specification</span></code></p>
+</div>
+</section>
+<section id="memory">
+<h2><span class="section-number">3.5.2. </span>Memory<a class="headerlink" href="#memory" title="Permalink to this heading">#</a></h2>
+<p>The total memory usage can be tricky to find and to allocate correctly. There are multiple directives for SLURM and <code class="docutils literal notranslate"><span class="pre">hydra.laucher</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`mem_per_cpu`: memory per cpu
+`mem_per_gpu`: memory per gpu
+`mem_gb`: total memory per node
+</pre></div>
+</div>
+<p>There is <a class="reference external" href="https://hpc.vub.be/docs/job-submission/gpu-job-types/#memory-settings-of-gpu-jobs">no SLURM directive</a> for setting GPU memory usage of the job. You can only define the CPU memory.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you request the right unit of memory. e.g. GigaBytes, not the default MegaBytes!</p>
+</div>
+</section>
+<section id="pytorch">
+<h2><span class="section-number">3.5.3. </span>PyTorch<a class="headerlink" href="#pytorch" title="Permalink to this heading">#</a></h2>
+<p>A pre-built PyTorch module is provided on joltik. Loading this module sets up python, CUDA, and pytorch.</p>
+<p>When using this module, you could run into some versioning issues. A solution can be switching to loading the python and CUDA module separately, and using a virtualenv with pytorch installed.</p>
+<p>A qsub script for DL with pytorch could look like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#PBS -l nodes=1:gpus=1</span>
+<span class="c1">#PBS -l walltime=4:00:00</span>
+
+<span class="c1"># load modules</span>
+module<span class="w"> </span>load<span class="w"> </span>Python
+module<span class="w"> </span>load<span class="w"> </span>CUDA
+
+<span class="c1"># load virtualenv</span>
+<span class="nb">source</span><span class="w"> </span><span class="nv">$VSC_HOME</span>/dl/bin/activate
+
+<span class="c1"># run GPU-accelerated script</span>
+<span class="c1"># NOTE: Specifically point to the python binary in the virtualenv.</span>
+<span class="c1"># Module loading places the system-wide python before the virtualenv python.</span>
+<span class="nv">$VSC_HOME</span>/dl/bin/python<span class="w"> </span><span class="nv">$VSC_HOME</span>/train.py
+</pre></div>
+</div>
+</section>
+<section id="pytorch-lightning">
+<h2><span class="section-number">3.5.4. </span>Pytorch Lightning<a class="headerlink" href="#pytorch-lightning" title="Permalink to this heading">#</a></h2>
+<p>PyTorch Lightning builds on top of PyTorch, removing a lot of boilerplate code.</p>
+<p>It has <a class="reference external" href="https://pytorch-lightning.readthedocs.io/en/stable/clouds/cluster_advanced.html">support for SLURM</a>. You can also combine it with <a class="reference external" href="https://github.com/ashleve/lightning-hydra-template">Hydra and submitit</a>, a very powerful combination.</p>
+</section>
+<section id="gpu-usage">
+<h2><span class="section-number">3.5.5. </span>GPU Usage<a class="headerlink" href="#gpu-usage" title="Permalink to this heading">#</a></h2>
+<p>For seeing the GPU Usage, you can use <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>, <code class="docutils literal notranslate"><span class="pre">nvtop</span></code>, <code class="docutils literal notranslate"><span class="pre">nvitop</span></code>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -528,7 +649,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             name: "python3",
-            path: "./jobs"
+            path: "./advanced"
         },
         predefinedOutput: true
     }
@@ -543,17 +664,17 @@ title="Print to PDF"
             <footer class="bd-footer-article">
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-  <a class='left-prev' id="prev-link" href="prerequisites.html" title="previous page">
+  <a class='left-prev' id="prev-link" href="hydra.html" title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
           <p class="prev-next-subtitle">previous</p>
-          <p class="prev-next-title"><span class="section-number">2.3. </span>Prerequisites</p>
+          <p class="prev-next-title"><span class="section-number">3.4. </span>Hydra</p>
       </div>
   </a>
-  <a class='right-next' id="next-link" href="hpc_setup.html" title="next page">
+  <a class='right-next' id="next-link" href="benchmarking.html" title="next page">
   <div class="prev-next-info">
       <p class="prev-next-subtitle">next</p>
-      <p class="prev-next-title"><span class="section-number">2.5. </span>Your HPC setup</p>
+      <p class="prev-next-title"><span class="section-number">3.6. </span>Benchmarking</p>
   </div>
   <i class="fa-solid fa-angle-right"></i>
   </a>
@@ -563,6 +684,47 @@ title="Print to PDF"
           </div>
           
           
+          
+            <div class="bd-sidebar-secondary bd-toc">
+              
+<div class="toc-item">
+  
+<div class="tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+</div>
+<nav id="bd-toc-nav" class="page-toc">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slurm">
+   3.5.1. SLURM
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#memory">
+   3.5.2. Memory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pytorch">
+   3.5.3. PyTorch
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pytorch-lightning">
+   3.5.4. Pytorch Lightning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gpu-usage">
+   3.5.5. GPU Usage
+  </a>
+ </li>
+</ul>
+
+</nav>
+</div>
+
+            </div>
           
           
         </div>
