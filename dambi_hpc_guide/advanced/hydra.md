@@ -1,6 +1,6 @@
 # Hydra
 
-Hydra is a Python framework on top of OmegaConf, enabling you to configure complex application, like a data processing pipeline with lots of steps and parameters. For a complete introduction to Hydra, see [the Hydra documentation](https://hydra.cc/).
+Hydra is a Python framework on top of OmegaConf, enabling you to configure complex application, like a data processing pipeline with lots of steps and parameters. For a complete introduction to Hydra, see [the Hydra documentation](https://hydra.cc/). For a full example, see [this repository](https://github.com/saeyslab/hydra_hpc_example).
 
 ## Run a test job locally
 
