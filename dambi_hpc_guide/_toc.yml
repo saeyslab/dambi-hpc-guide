@@ -27,8 +27,7 @@ chapters:
   - file: advanced/gpu
   - file: advanced/benchmarking
   - file: advanced/multinode
-- file: contribute/intro
+- file: examples/intro
   sections:
-  - file: contribute/markdown
-  - file: contribute/notebooks
-  - file: contribute/markdown-notebooks
+    - file: examples/python_single_core
+    - file: examples/MPI_multi_core

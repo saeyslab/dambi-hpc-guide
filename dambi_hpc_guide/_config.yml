@@ -35,3 +35,9 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+
+launch_buttons:
+  notebook_interface: "jupyterlab"  # or "classic"
+  binderhub_url: "https://mybinder.org"  # The URL for your BinderHub (e.g., https://mybinder.org)
+  colab_url: "https://colab.research.google.com"
+  thebe: true
